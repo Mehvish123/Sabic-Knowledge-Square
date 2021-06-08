@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SABIC Typeface Headline';
+    src: url('fonts/SABICTypefaceHeadlineLt.eot');
+    src: url('fonts/SABICTypefaceHeadlineLt.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SABICTypefaceHeadlineLt.woff2') format('woff2'),
+         url('fonts/SABICTypefaceHeadlineLt.woff') format('woff'),
+         url('fonts/SABICTypefaceHeadlineLt.ttf')  format('truetype'),
+         url('fonts/SABICTypefaceHeadlineLt.svg#SABIC Typeface Headline') format('svg');
+}

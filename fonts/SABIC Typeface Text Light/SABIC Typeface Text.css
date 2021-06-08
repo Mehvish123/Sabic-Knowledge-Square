@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SABIC Typeface Text';
+    src: url('fonts/SABICTypefaceTextLt.eot');
+    src: url('fonts/SABICTypefaceTextLt.eot?#iefix') format('embedded-opentype'),
+         url('fonts/SABICTypefaceTextLt.woff2') format('woff2'),
+         url('fonts/SABICTypefaceTextLt.woff') format('woff'),
+         url('fonts/SABICTypefaceTextLt.ttf')  format('truetype'),
+         url('fonts/SABICTypefaceTextLt.svg#SABIC Typeface Text') format('svg');
+}

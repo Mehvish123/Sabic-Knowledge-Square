@@ -1,0 +1,221 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SABIC | Knowledge Square</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+  <!--Reset Styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <!-- custom styles -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/responsive.css">
+</head>
+
+<body>
+  <main class="mainWrapper">
+    <!--Header Section Starts-->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="headerElements d-flex justify-content-between align-items-start flex-row-reverse flex-wrap">
+              <!--SABIC Logo-->
+              <div class="sabicLogo">
+                <a href="#">
+                  <img src="./assets/icons/XMLID_47_.svg" alt="SABIC" class="img-fluid">
+                </a>
+              </div>
+              <div class="headerElementDetails d-flex align-items-center">
+                <div class="user d-flex align-items-center uhSameStyle">
+                  <p class="userEllipse d-flex align-items-center justify-content-center">NA</p>
+                  <p class="username">Noah Andersen</p>
+                  <button class="btnCaret" id="userCaret"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                      viewBox="0 0 24 24" width="30px" fill="#0047BBBF">
+                      <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
+                      <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></button>
+                  <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                  <div class="profileDropdown d-none capBefore">
+                    <ul>
+                      <li class="d-flex align-items-center">
+                        <i class="far fa-user-circle"></i>
+                        <a href="">My Profile</a>
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <i class="fas fa-cog"></i>
+                        <a href="">User Setting</a>
+                      </li>
+                    </ul>
+                    <h6 class="lastLogout">Login as:: 32000000</h6>
+                  </div>
+                </div>
+                <div class="helpDesk d-flex align-items-center uhSameStyle">
+                  <p>Help</p>
+                  <img src="./assets/icons/Icon material-help-outline.svg" alt="help" class="img-fluid">
+                  <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                </div>
+                <div class="notification d-flex align-items-center">
+                  <img src="/assets/icons/Bell.svg" alt="notification" class="bellIcon img-fluid position-relative">
+                  <div class="notCount position-absolute d-flex justify-content-center align-items-center">2</div>
+                  <div class="notificationPanel d-none overflow-auto capBefore">
+                    <ul>
+                      <li><a href="">Notification 1</a></li>
+                      <li><a href="">Notification 2</a></li>
+                      <li><a href="">Notification 3</a></li>
+                    </ul>
+                    <button type="button" class="clearBtn"><img src="/assets/icons/clear_all_black_24dp.svg"
+                        alt="clear"></button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <!--Header Section Ends Here-->
+    <!--Main Page Section Starts-->
+    <section class="kSquareSection d-flex justify-content-center align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1 class="text-center title">KNOWLEDGE SQUARE</h1>
+          </div>
+          <div class="col-12">
+            <form autocomplete="off">
+              <div class="input-group searchBox">
+                <div class="input-group-prepend d-flex">
+                  <button class="btnCaret btn dropdown-toggle" id="filterCaret" type="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">All<img
+                      src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                      class="img-fluid"></button>
+                  <div class="dropdown-menu filterMenu d-none capBefore">
+                    <div class="filter">
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="selAll">
+                        <label class="form-check-label" for="selAll">Select All</label>
+                      </div>
+                    </div>
+
+                    <div role="separator" class="dropdown-divider"></div>
+                    <div class="filter d-flex">
+                      <p>Internal:</p>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="kmp">
+                        <label class="form-check-label" for="kmp">KMP</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="ecm">
+                        <label class="form-check-label" for="ecm">ECM</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="eln">
+                        <label class="form-check-label" for="eln">ELN</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="qc">
+                        <label class="form-check-label" for="qc">QC</label>
+                      </div>
+                    </div>
+                    <div role="separator" class="dropdown-divider"></div>
+                    <div class="filter d-flex">
+                      <p>External:</p>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="oneSearch">
+                        <label class="form-check-label" for="oneSearch">OneSearch</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="skiFinder">
+                        <label class="form-check-label" for="skiFinder">SkiFinder</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="derwent">
+                        <label class="form-check-label" for="derwent">Derwent</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="searchControlContent d-flex align-items-center">
+                  <img src="./assets/icons/Icon material-search.svg" alt="search" class="img-fluid magnify">
+                  <input type="search" class="form-control searchControl"
+                    placeholder="Search for Profile Chemical Location">
+                  <img src="./assets/icons/Icon material-mic.svg" alt="speech" class="img-fluid microphone">
+                  <div class="dropdown-menu searchSuggestions capBefore d-none">
+                    <ul>
+                      <li class="d-flex align-items-center"><i class="far fa-user-circle"></i>
+                        <a href="" class="w-100">My Profile</a>
+                        <img src="/assets/icons/clear.svg" alt="clear" class="img-fluid clearHistory">
+                      </li>
+                      <li class="d-flex align-items-center"><i class="fas fa-map-marker-alt"></i>
+                        <a href="" class="w-100">Location Name</a>
+                        <img src="/assets/icons/clear.svg" alt="clear" class="img-fluid clearHistory">
+                      </li>
+                      
+                    </ul>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="searchresultContent d-flex align-items-center justify-content-center">
+              <div class="searchBtnContainer position-relative">
+                <button class="roundBtn  btn dropdown-toggle" id="searchResultCaret" type="button"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Results<img
+                    src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                    class="img-fluid"></button>
+                <div class="dropdown-menu recentSearch d-none capBefore" id="recentSearch">
+                  <ul>
+                    <li class="d-flex align-items-center"><i class="fas fa-search"></i><a href="">Search Result</a></li>
+                    <li class="d-flex align-items-center"><i class="fas fa-chart-line"></i><a href="">Visualization</a></li>
+                    <li class="d-flex align-items-center"><a href="">Cluster</a></li>
+                  </ul>
+                </div>
+              </div>
+              <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+              <button type="button" class="favourite roundBtn">My Favourite</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Main Page Section Ends-->
+    <!--Footer Starts-->
+    <footer class="d-flex align-items-center">
+      <div class="container">
+        <div class="copyright d-flex align-items-center justify-content-end" id="sabicCopyright">
+          <p>Copyright</p>
+          <script type="text/javascript">
+            var today = new Date(),
+              currentDate = today.getFullYear();
+            var para = document.createElement("p");
+            var date = document.createTextNode(currentDate);
+            para.appendChild(date);
+            var element = document.getElementById('sabicCopyright');
+            element.appendChild(para);
+          </script>
+          <p>SABIC</p>
+        </div>
+      </div>
+    </footer>
+    <!--Footer Ends-->
+  </main>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <!--Bootstrap-->
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--custom scripts-->
+  <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>

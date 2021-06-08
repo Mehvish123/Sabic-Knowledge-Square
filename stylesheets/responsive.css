@@ -1,0 +1,128 @@
+@media (min-width: 1200px) {
+  /* line 4, ../sass/responsive.scss */
+  .container {
+    max-width: 1320px;
+  }
+}
+@media (min-width: 1500px) {
+  /* line 10, ../sass/responsive.scss */
+  .container {
+    max-width: 1420px;
+  }
+
+  /* line 13, ../sass/responsive.scss */
+  .sort {
+    width: 250px !important;
+  }
+}
+@media (min-width: 1700px) {
+  /* line 19, ../sass/responsive.scss */
+  .container {
+    max-width: 1620px;
+  }
+
+  /* line 24, ../sass/responsive.scss */
+  .pageTopSection .searchBox {
+    height: 70px;
+    width: 600px;
+  }
+
+  /* line 30, ../sass/responsive.scss */
+  .headerSearchContainer form {
+    max-width: 832px;
+  }
+
+  /* line 34, ../sass/responsive.scss */
+  .pageTopSection .searchBox .searchControlContent {
+    flex-basis: 81%;
+  }
+
+  /* line 38, ../sass/responsive.scss */
+  .pageTopSection .searchBox .input-group-prepend {
+    flex-basis: 18%;
+  }
+
+  /* line 42, ../sass/responsive.scss */
+  .mainContentSection .samePaddingHeader.topHeading {
+    padding: 29px 20px 10px;
+  }
+}
+@media (max-width: 991px) {
+  /* line 50, ../sass/responsive.scss */
+  .searchBox .input-group-prepend {
+    flex-basis: 15%;
+  }
+  /* line 54, ../sass/responsive.scss */
+  .searchBox .searchControlContent {
+    flex-basis: 85%;
+  }
+}
+@media (max-width: 767px) {
+  /* line 62, ../sass/responsive.scss */
+  .searchBox .input-group-prepend {
+    flex-basis: 18%;
+  }
+  /* line 66, ../sass/responsive.scss */
+  .searchBox .searchControlContent {
+    flex-basis: 82%;
+  }
+  /* line 70, ../sass/responsive.scss */
+  .searchBox .searchControlContent .searchControl::placeholder {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+@media (max-width: 479px) {
+  /* line 82, ../sass/responsive.scss */
+  header .headerElementDetails .uhSameStyle {
+    font-size: 13px;
+  }
+
+  /* line 88, ../sass/responsive.scss */
+  button.roundBtn {
+    height: 45px;
+    width: 150px;
+  }
+
+  /* line 95, ../sass/responsive.scss */
+  h1 {
+    line-height: 35px;
+    font-size: 24px;
+  }
+
+  /* line 100, ../sass/responsive.scss */
+  .searchBox {
+    height: 60px;
+  }
+  /* line 103, ../sass/responsive.scss */
+  .searchBox .input-group-prepend {
+    flex-basis: 25%;
+  }
+  /* line 106, ../sass/responsive.scss */
+  .searchBox .input-group-prepend button {
+    padding: 0 20px 0 20px;
+  }
+  /* line 111, ../sass/responsive.scss */
+  .searchBox .searchControlContent {
+    flex-basis: 75%;
+  }
+
+  /* line 117, ../sass/responsive.scss */
+  .filterMenu:before {
+    left: -220px;
+  }
+  /* line 121, ../sass/responsive.scss */
+  .filterMenu .filter {
+    flex-wrap: wrap;
+  }
+
+  /* line 127, ../sass/responsive.scss */
+  .searchresultContent button {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  /* line 130, ../sass/responsive.scss */
+  .searchresultContent button img {
+    padding-left: 5px;
+  }
+}

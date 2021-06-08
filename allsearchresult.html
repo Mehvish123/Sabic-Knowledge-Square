@@ -1,0 +1,710 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SABIC | Knowledge Square</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+  <!--Reset Styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <!-- custom styles -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/responsive.css">
+</head>
+
+<body>
+  <main class="mainWrapper">
+    <div class="pageTopSection">
+      <!--Header Section Starts-->
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="headerElements d-flex align-items-start flex-row-reverse flex-wrap px-sm-4">
+                <!--SABIC Logo-->
+                <div class="sabicLogo">
+                  <a href="#">
+                    <img src="./assets/icons/XMLID_47_.svg" alt="SABIC" class="img-fluid">
+                  </a>
+                </div>
+                <div class="headerElementDetails d-flex align-items-center">
+                  <div class="user d-flex align-items-center uhSameStyle">
+                    <p class="userEllipse d-flex align-items-center justify-content-center">NA</p>
+                    <p class="username">Noah Andersen</p>
+                    <button class="btnCaret" id="userCaret"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
+                        viewBox="0 0 24 24" width="30px" fill="#0047BBBF">
+                        <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></button>
+                    <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                    <div class="profileDropdown d-none capBefore">
+                      <ul>
+                        <li class="d-flex align-items-center">
+                          <i class="far fa-user-circle"></i>
+                          <a href="">My Profile</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                          <i class="fas fa-cog"></i>
+                          <a href="">User Setting</a>
+                        </li>
+                      </ul>
+                      <h6 class="lastLogout">Login as:: 32000000</h6>
+                    </div>
+                  </div>
+                  <div class="helpDesk d-flex align-items-center uhSameStyle">
+                    <p>Help</p>
+                    <img src="./assets/icons/Icon material-help-outline.svg" alt="help" class="img-fluid">
+                    <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                  </div>
+                  <div class="notification d-flex align-items-center">
+                    <img src="/assets/icons/Bell.svg" alt="notification" class="bellIcon img-fluid position-relative">
+                    <div class="notCount position-absolute d-flex justify-content-center align-items-center">2</div>
+                    <div class="notificationPanel d-none overflow-auto capBefore">
+                      <ul>
+                        <li><a href="">Notification 1</a></li>
+                        <li><a href="">Notification 2</a></li>
+                        <li><a href="">Notification 3</a></li>
+                      </ul>
+                      <button type="button" class="clearBtn"><img src="/assets/icons/clear_all_black_24dp.svg"
+                          alt="clear"></button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-12 position-relative">
+              <div class="headerSearchContainer d-flex align-items-center position-absolute">
+                <h2 class="title">KNOWLEDGE SQUARE</h2>
+                <form autocomplete="off" class="d-flex">
+                  <div class="input-group searchBox mt-0">
+                    <div class="input-group-prepend d-flex">
+                      <button class="btnCaret btn dropdown-toggle" id="filterCaret" type="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">All<img
+                          src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                          class="img-fluid"></button>
+                      <div class="dropdown-menu filterMenu d-none capBefore">
+                        <div class="filter">
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="selAll">
+                            <label class="form-check-label" for="selAll">Select All</label>
+                          </div>
+                        </div>
+
+                        <div role="separator" class="dropdown-divider"></div>
+                        <div class="filter d-flex">
+                          <p>Internal:</p>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="kmp">
+                            <label class="form-check-label" for="kmp">KMP</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="ecm">
+                            <label class="form-check-label" for="ecm">ECM</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="eln">
+                            <label class="form-check-label" for="eln">ELN</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="qc">
+                            <label class="form-check-label" for="qc">QC</label>
+                          </div>
+                        </div>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <div class="filter d-flex">
+                          <p>External:</p>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="oneSearch">
+                            <label class="form-check-label" for="oneSearch">OneSearch</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="skiFinder">
+                            <label class="form-check-label" for="skiFinder">SkiFinder</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="derwent">
+                            <label class="form-check-label" for="derwent">Derwent</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="searchControlContent d-flex align-items-center">
+                      <img src="./assets/icons/Icon material-search.svg" alt="search" class="img-fluid magnify">
+                      <input type="search" class="form-control searchControl"
+                        placeholder="Search for Profile Chemical Location">
+                      <img src="./assets/icons/Icon material-mic.svg" alt="speech" class="img-fluid microphone">
+                    </div>
+
+                  </div>
+                  <div class="searchBtnContainer position-relative d-flex align-items-center">
+                    <button class="roundBtn btn dropdown-toggle topHeaderBtn" id="searchResultCaret" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Results<img
+                        src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                        class="img-fluid"></button>
+                    <button type="button" class="roundBtn topHeaderBtn">Cancel</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </header>
+      <!--Header Section Ends Here-->
+      <!--Tab Section Starts-->
+      <section class="tabSection">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <ul class="nav nav-tabs d-flex flex-wrap" role="tablist" id="searchTab" data-tabs="tabs">
+                <li class="nav-item waves-effect waves-light d-flex align-items-center">
+
+                  <a class="nav-link active text-center" id="allResult-tab" data-bs-toggle="tab"
+                    data-bs-target="#allResults" role="tab" aria-controls="allResults" aria-selected="true"><i
+                      class="fas fa-search"></i>All Search Result</a>
+                </li>
+                <li class="nav-item waves-effect waves-light d-flex align-items-center">
+
+                  <a class="nav-link text-center" id="visualization-tab" data-bs-toggle="tab"
+                    data-bs-target="#visualization" role="tab" aria-controls="visualization" aria-selected="true"><i
+                      class="fas fa-chart-line"></i>Visualization</a>
+                </li>
+                <li class="nav-item waves-effect waves-light d-flex align-items-center">
+
+                  <a class="nav-link text-center" id="cluster-tab" data-bs-toggle="tab" data-bs-target="#cluster"
+                    role="tab" aria-controls="cluster" aria-selected="true"><i class="fas fa-chart-line"></i>Cluster</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Tab Section Ends-->
+    </div>
+    <!--Filter Section Starts-->
+    <section class="mainContentSection mb-5">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="tab-content" id="tabContent">
+            <!--All Results Tab Starts-->
+            <div class="tab-pane fade active show" id="allResults" role="tabpanel" aria-labelledby="allResult-tab">
+              <!--Breadcrumb Section Starts-->
+              <section class="breadcrumbSection d-flex">
+                <div class="navigationWrapper">
+                  <div class="container">
+                    <div class="breadcrumbNavigation">
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item d-flex align-items-center"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">All Search
+                            Result</li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-auto me-3">
+                  <div class="dropdown">
+                    <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="false"><img src="/assets/icons/star_border.svg" alt="fav">
+                      My Favourite <img src="/assets/icons/expand.svg" alt="expand">
+                    </button>
+                    <ul class="dropdown-menu capBefore" aria-labelledby="favDD">
+                      <li class="d-flex align-items-center"><img src="/assets/icons/history.svg" alt="history"><a class="dropdown-item" href="#">Result History</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <!--Breadcrumb Section Ends-->
+              <div class="allResultsContent d-flex">
+                <div class="filterBySection">
+                  <div class="filterHeading d-flex align-items-baseline">
+                    <i class="fas fa-filter filterIcon"></i>
+                    <span class="filterByText">Filter By</span>
+                  </div>
+                  <!--Calender Area starts-->
+                  <div class="calenderArea sameBorder same-MB">
+                    <h5 class="sameBorderBottom samePaddingHeader checkHeader">Date Range</h5>
+                    <div class="form-group  d-flex justify-content-between">
+                      <div class="datepickerWrap input-group" id="datepicker-1">
+                        <label class="control-label" for="fromdate">From Date</label>
+                        <div class="input-group-append appendFields d-flex align-items-center">
+                          <input class="form-control" id="fromdate" name="fromdate" placeholder="12/03/2021"
+                            type="text" />
+
+                        </div>
+                      </div>
+                      <div class="datepickerWrap input-group" id="datepicker-2">
+                        <label class="control-label" for="todate">To Date</label>
+                        <div class="input-group-append appendFields d-flex align-items-center">
+                          <input class="form-control" id="todate" name="todate" placeholder="03/05/2021" type="text" />
+                          <div class="input-group-append"><span class="input-group-text"> <i class="far fa-calendar-alt"
+                                id="toCal"></i></span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Calender Area Ends-->
+                  <!--CheckBoxes Start-->
+                  <div class="authorCheckBox sameBorder sameMt">
+                    <h5 class="sameBorderBottom samePaddingHeader checkHeader">Author (4)</h5>
+                    <div class="sameStyleForm authorForm samePaddingBody">
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="auth-1">
+                        <label class="form-check-label" for="auth-1">Kumar, Ajay</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="auth-2">
+                        <label class="form-check-label" for="auth-2">Rao, Narayana</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="auth-3">
+                        <label class="form-check-label" for="auth-3">Sikder, Arun</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="auth-4">
+                        <label class="form-check-label" for="auth-4">Center</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="docCheckBox sameBorder sameMt">
+                    <h5 class="sameBorderBottom samePaddingHeader checkHeader">Document Type (4)</h5>
+                    <div class="sameStyleForm doctypeForm samePaddingBody">
+                      <div class="form-group form-check d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input" id="doc-1">
+                        <label class="form-check-label" for="doc-1">Word Document</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="doc-2">
+                        <label class="form-check-label" for="doc-2">PDF</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="doc-3">
+                        <label class="form-check-label" for="doc-3">Excel</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="doc-4">
+                        <label class="form-check-label" for="doc-4">PPT</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resCheckBox sameBorder sameMt">
+                    <h5 class="sameBorderBottom samePaddingHeader checkHeader">Resources (3)</h5>
+                    <div class="sameStyleForm resourcesForm samePaddingBody">
+                      <div class="form-group form-check d-flex align-items-center">
+                        <input type="checkbox" class="form-check-input" id="res-1">
+                        <label class="form-check-label" for="res-1">KMP</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="res-2">
+                        <label class="form-check-label" for="res-2">ECM</label>
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="res-3">
+                        <label class="form-check-label" for="res-3">ELN</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!--CheckBoxes End-->
+                </div>
+                <div class="rightOuterWrapper d-flex justify-content-around px-0">
+                  <div class="centerWrap">
+                    <div class="d-flex">
+                      <h5 class="searchHeading">Search Results for <span class="searchName">Peeters </span><span
+                          class="searchCount">(2 results found)</span></h5>
+                      <div class="sort d-flex align-items-center ms-auto" style="width: 300px;">
+                        <div style="flex-basis:40%;">
+                          Sort By <i class="fas fa-sort-up text-secondary"></i> <i class="fas fa-sort-down text-primary"
+                            style="margin-left: -12.5px;"></i>
+                        </div>
+                        <select class="form-select" style="border-radius: 8px;">
+                          <option value="1">Relevance</option>
+                          <option value="2">Two</option>
+                          <option value="3">Three</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="searchResultContainer mt-4">
+                      <div class="searchResultInnerContainer sameBorder">
+                        <div class="searchResInnerContent">
+                          <p class="fadeBorder samePaddingHeader topHeading">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing elit,sed do eiusmod tempor
+                          </p>
+                          <div class="list-item fadeBorder samePaddingHeader">
+                            <div class="makeFav d-flex align-items-start">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation.
+                              </p>
+                              <img src="/assets/icons/star_border.svg" alt="fav" class="img-fluid">
+                            </div>
+
+                            <p class="attachmentLink d-flex align-items-center">
+                              <a href=""><img src="assets/icons/link.svg" class="attachmentIcon" alt="link"></a>
+                              <a href="#">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation</a>
+                            </p>
+                            <div class="itemDetails d-flex align-items-center justify-content-between">
+                              <p>Last Modified: 2020-01-17</p>
+                              <p>Resource KMP</p>
+                              <p>Relevance Score: 12.97</p>
+                              <a href=""><i class="far fa-file-pdf pdfIcon"></i></a>
+                            </div>
+                          </div>
+
+                          <div class="list-item samePaddingHeader">
+                            <div class="makeFav d-flex align-items-start">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                                do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat.
+                              </p>
+                              <img src="/assets/icons/star_border.svg" alt="fav" class="img-fluid">
+                            </div>
+                            <p class="attachmentLink d-flex align-items-center">
+                              <a href=""><img src="assets/icons/link.svg" class="attachmentIcon" alt="link"></a>
+                              <a href="#">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation</a>
+                            </p>
+                            <div class="itemDetails d-flex align-items-center justify-content-between">
+                              <p>Last Modified: 2020-01-17</p>
+                              <p>Resource KMP</p>
+                              <p>Relevance Score: 12.97</p>
+                              <a href=""><i class="far fa-file-pdf pdfIcon"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="paginationContainer">
+                      <nav aria-label="...">
+                        <ul class="pagination justify-content-end align-items-center">
+                          <li class="page-item disabled">
+                            <span class="page-link">Previous</span>
+                          </li>
+                          <li class="page-item active" aria-current="page">
+                            <span class="page-link">1</span>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                          </li>
+                          <li class="page-item">
+                            <a class="page-link" href="#">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+
+                  <div class="rightWrap">
+                    <div class="empDetailsContainer sameBorder">
+                      <h5 class="sameBorderBottom samePaddingHeader searchHeading text-white text-center empHeading">
+                        B.M.H.
+                        Peeters</h5>
+                      <div class="empDetails">
+                        <div class="empImage  position-relative d-flex justify-content-between">
+                          <img src="/assets/icons/peeters.svg" alt="Peeters" class="img-fluid">
+                          <p class="text-right">Last Updated Date: 02/05/2021</p>
+                        </div>
+                        <div class="idDetails ms-auto">
+                          <div class="empLoginId d-flex align-items-center">
+                            <p>Employee ID: 51900</p>
+                            <img src="/assets/icons/Line 117.svg" alt="line">
+                            <p>Login ID: SABICCORP\312743</p>
+                          </div>
+                          <p class="empEmail d-flex align-items-center">
+                            <i class="fas fa-envelope"></i>
+                            <a href="">Bas.Peeters@SABIC.com</a>
+                          </p>
+                        </div>
+                      </div>
+                      <ul class="employeeResume">
+                        <li class="fadeBorder"><span>SBU:</span><span>Engineering & Project Management</span></li>
+                        <li class="fadeBorder"><span>Education:</span><span>University of Technology, Eihndoven, the
+                            Netherlands Process Engineering</span></li>
+                        <li class="fadeBorder"><span>Expertise:</span><span>Project Management</span></li>
+                        <li class="fadeBorder"><span>Projects:</span><span>Higher Alpha Olefins, Gelsenkirchin
+                            PPE-Recommissioning,Bergen op Zoom @Europe, Geleen</span></li>
+                        <li class="d-flex justify-content-between align-items-center">
+                          <p class="d-flex align-items-center">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Sittard Netherlands</span>
+                          </p>
+                          <p class="d-flex align-items-center">
+                            <img src="assets/icons/link.svg" class="attachmentIcon" alt="link">
+                            <a href="">SABICCORP\312743</a>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="similarProfileContainer sameBorder sameMt">
+                      <h5 class="sameBorderBottom samePaddingHeader searchHeading smProfile">Similar Profile (2)</h5>
+                      <div class="similarItemsWrapper">
+                        <ul class="d-flex align-items-center similarItemList">
+                          <li class="text-center">
+                            <div class="similarItemImage">
+                              <img src="/assets/icons/ajay-patnaik.svg" alt="ajay-patnaik" class="img-fluid">
+                            </div>
+                            <h5 class="uName">Ajay Patnaik</h5>
+                            <a href="" class="sMail">ajay.patnaik@SABIC.com</a>
+                            <p class="d-flex align-items-center">
+                              <img src="assets/icons/link.svg" class="attachmentIcon" alt="link">
+                              <a href="">SABICCORP\312743</a>
+                            </p>
+                          </li>
+                          <li class="text-center">
+                            <div class="similarItemImage">
+                              <img src="/assets/icons/ajay-kumar.svg" alt="ajay-kumar" class="img-fluid">
+                            </div>
+                            <h5 class="uName">Ajay Kumar</h5>
+                            <a href="" class="sMail">ajay.kumar@SABIC.com</a>
+                            <p class="d-flex align-items-center">
+                              <img src="assets/icons/link.svg" class="attachmentIcon" alt="link">
+                              <a href="">SABICCORP\312743</a>
+                            </p>
+                          </li>
+                        </ul>
+                      </div>
+                      <a href="" class="seeAll d-flex align-items-center justify-content-end">
+                        <span>See All</span>
+                        <i class="fa fa-angle-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--All Results Tab Ends-->
+            <!--Visualization Tab Starts-->
+            <div class="tab-pane fade" id="visualization" role="tabpanel" aria-labelledby="visualization-tab">
+              <!--Breadcrumb Section Starts-->
+              <section class="breadcrumbSection d-flex">
+                <div class="navigationWrapper">
+                  <div class="container">
+                    <div class="breadcrumbNavigation">
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item d-flex align-items-center"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item d-flex align-items-center"><a href="allsearchresult.html">All
+                              Search
+                              Result</a></li>
+                          <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">Summary
+                            Matrics for Peeter</li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-auto me-3">
+                  <div class="dropdown">
+                    <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="false"><img src="/assets/icons/star_border.svg" alt="fav">
+                      My Favourite <img src="/assets/icons/expand.svg" alt="expand">
+                    </button>
+                    <ul class="dropdown-menu capBefore" aria-labelledby="favDD">
+                      <li class="d-flex align-items-center"><img src="/assets/icons/history.svg" alt="history"><a class="dropdown-item" href="#">Result History</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <!--Breadcrumb Section Ends-->
+              <div class="filter-input ms-auto me-4" style="width: 550px;">
+                <div class="input-group mb-4">
+                  <span class="input-group-text bg-transparent rounded-start border px-3"><i
+                      class="fas fa-filter filterIcon text-secondary me-2"></i>Filter
+                    By</span>
+                  <select class="form-select form-control border-end-0">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <span class="input-group-text bg-white border-start-0 rounded-end border pe-2">
+                    <button class="btn btn-primary rounded-pill" style="line-height:1;">Apply</button>
+                  </span>
+                </div>
+              </div>
+              <section class="row m-3">
+                <div class="col-6">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Author wise Metric</div>
+                    <div class="p-3">
+                      <canvas id="authorChart" width="400" height="170"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Region wise Metric</div>
+                    <div class="p-3">
+                      <canvas id="regionChart" width="400" height="170"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mt-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Yearly - Monthly wise Metric</div>
+                    <div class="p-3">
+                      <canvas id="yearlyMonthlyChart" width="400" height="170"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 mt-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Yearly wise Metric</div>
+                    <div class="p-3">
+                      <canvas id="yearlyChart" width="400" height="170"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!--Visualization Tab Ends-->
+            <!--Cluster Tab Starts-->
+            <div class="tab-pane fade" id="cluster" role="tabpanel" aria-labelledby="cluster-tab">
+              <!--Breadcrumb Section Starts-->
+              <section class="breadcrumbSection d-flex">
+                <div class="navigationWrapper">
+                  <div class="container">
+                    <div class="breadcrumbNavigation">
+                      <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item d-flex align-items-center"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item d-flex align-items-center"><a href="allsearchresult.html">All
+                              Search
+                              Result</a></li>
+                          <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">Cluster
+                            Result Summary for Peeter</li>
+                        </ol>
+                      </nav>
+                    </div>
+                  </div>
+                </div>
+                <div class="ms-auto me-3">
+                  <div class="dropdown">
+                    <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="false"><img src="/assets/icons/star_border.svg" alt="fav">
+                      My Favourite <img src="/assets/icons/expand.svg" alt="expand">
+                    </button>
+                    <ul class="dropdown-menu capBefore" aria-labelledby="favDD">
+                      <li class="d-flex align-items-center"><img src="/assets/icons/history.svg" alt="history"><a class="dropdown-item" href="#">Result History</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+              <!--Breadcrumb Section Ends-->
+              <div class="filter-input ms-auto me-4" style="width: 550px;">
+                <div class="input-group mb-4">
+                  <span class="input-group-text bg-transparent rounded-start border px-3"><i
+                      class="fas fa-filter filterIcon text-secondary me-2"></i>Filter
+                    By</span>
+                  <select class="form-select form-control border-end-0">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                  </select>
+                  <span class="input-group-text bg-white border-start-0 rounded-end border pe-2">
+                    <button class="btn btn-primary rounded-pill" style="line-height:1;">Apply</button>
+                  </span>
+                </div>
+              </div>
+              <section class="row m-3">
+                <div class="col-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Butane to Ethane Project</div>
+                    <div class="p-3">
+                      <img src="./assets/images/clusterImage.png" class="w-100 rounded">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Process Development</div>
+                    <div class="p-3">
+                      <img src="./assets/images/clusterImage.png" class="w-100 rounded">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Powerpoint Presentation</div>
+                    <div class="p-3">
+                      <img src="./assets/images/clusterImage.png" class="w-100 rounded">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 mt-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Complete</div>
+                    <div class="p-3">
+                      <img src="./assets/images/clusterImage.png" class="w-100 rounded">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 mt-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Study Catalyst</div>
+                    <div class="p-3">
+                      <img src="./assets/images/clusterImage.png" class="w-100 rounded">
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 mt-4">
+                  <div class="border rounded">
+                    <div class="border-bottom p-3">Energy</div>
+                    <div class="p-3">
+                      <img src="./assets/images/clusterImage.png" class="w-100 rounded">
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!--Cluster Tab Ends-->
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--Filter Section Ends-->
+    <!--Footer Starts-->
+    <footer class="d-flex align-items-center">
+      <div class="container">
+        <div class="copyright d-flex align-items-center justify-content-end" id="sabicCopyright">
+          <p>Copyright</p>
+          <script type="text/javascript">
+            var today = new Date(),
+              currentDate = today.getFullYear();
+            var para = document.createElement("p");
+            var date = document.createTextNode(currentDate);
+            para.appendChild(date);
+            var element = document.getElementById('sabicCopyright');
+            element.appendChild(para);
+          </script>
+          <p>SABIC</p>
+        </div>
+      </div>
+    </footer>
+    <!--Footer Ends-->
+  </main>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <!--Bootstrap-->
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--custom scripts-->
+  <script src="./js/scripts.js"></script>
+  <script src="./js/chartjs.js"></script>
+</body>
+
+</html>

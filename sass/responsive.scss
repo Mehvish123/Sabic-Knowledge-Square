@@ -1,0 +1,136 @@
+@import "mixins.scss";
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    max-width: 1420px;
+  }
+  .sort{
+    width:250px !important;
+  }
+}
+
+@media (min-width: 1700px) {
+  .container {
+    max-width: 1620px;
+  }
+
+  .pageTopSection {
+    .searchBox {
+      height: 70px;
+      width: 600px;
+    }
+  }
+
+  .headerSearchContainer form {
+    max-width: 832px;
+  }
+
+  .pageTopSection .searchBox .searchControlContent {
+    flex-basis: 81%;
+  }
+
+  .pageTopSection .searchBox .input-group-prepend {
+    flex-basis: 18%;
+  }
+  .mainContentSection{
+    .samePaddingHeader.topHeading {
+      padding: 29px 20px 10px;
+    }
+  } 
+}
+
+@media (max-width: 991px) {
+  .searchBox {
+    .input-group-prepend {
+      flex-basis: 15%;
+    }
+
+    .searchControlContent {
+      flex-basis: 85%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .searchBox {
+    .input-group-prepend {
+      flex-basis: 18%;
+    }
+
+    .searchControlContent {
+      flex-basis: 82%;
+
+      .searchControl {
+        &::placeholder {
+          @include font-14;
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 479px) {
+  header {
+    .headerElementDetails {
+      .uhSameStyle {
+        font-size: 13px;
+      }
+    }
+  }
+
+  button.roundBtn {
+    height: 45px;
+    width: 150px;
+
+  }
+
+
+  h1 {
+    line-height: 35px;
+    font-size: 24px;
+  }
+
+  .searchBox {
+    height: 60px;
+
+    .input-group-prepend {
+      flex-basis: 25%;
+
+      button {
+        padding: 0 20px 0 20px;
+      }
+    }
+
+    .searchControlContent {
+      flex-basis: 75%;
+    }
+  }
+
+  .filterMenu {
+    &:before {
+      left: -220px;
+    }
+
+    .filter {
+      flex-wrap: wrap;
+    }
+  }
+
+  .searchresultContent {
+    button {
+      @include font-14;
+
+      img {
+        padding-left: 5px;
+      }
+    }
+  }
+
+}
