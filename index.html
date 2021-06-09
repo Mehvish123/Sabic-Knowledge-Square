@@ -22,7 +22,7 @@
           <div class="col">
             <div class="headerElements d-flex justify-content-between align-items-start flex-row-reverse flex-wrap">
               <!--SABIC Logo-->
-              <div class="sabicLogo">
+              <div class="sabicLogo ms-4">
                 <a href="#">
                   <img src="./assets/icons/XMLID_47_.svg" alt="SABIC" class="img-fluid">
                 </a>
@@ -31,12 +31,12 @@
                 <div class="user d-flex align-items-center uhSameStyle">
                   <p class="userEllipse d-flex align-items-center justify-content-center">NA</p>
                   <p class="username">Noah Andersen</p>
-                  <button class="btnCaret" id="userCaret"><svg xmlns="http://www.w3.org/2000/svg" height="30px"
-                      viewBox="0 0 24 24" width="30px" fill="#0047BBBF">
-                      <path d="M24 24H0V0h24v24z" fill="none" opacity=".87" />
-                      <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z" /></svg></button>
+                  <button class="btnCaret dropdown-toggle" id="userCaret" type="button" data-bs-toggle="dropdown" aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#0047BBBF" class="">
+                    <path d="M24 24H0V0h24v24z" fill="none" opacity=".87"></path>
+                    <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path></svg></button>
+                  
                   <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
-                  <div class="profileDropdown d-none capBefore">
+                  <div class="dropdown-menu profileDropdown capBefore">
                     <ul>
                       <li class="d-flex align-items-center">
                         <i class="far fa-user-circle"></i>
@@ -56,9 +56,9 @@
                   <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
                 </div>
                 <div class="notification d-flex align-items-center">
-                  <img src="/assets/icons/Bell.svg" alt="notification" class="bellIcon img-fluid position-relative">
+                  <img src="/assets/icons/Bell.svg" alt="notification" class="dropdown-toggle bellIcon img-fluid position-relative" type="button" data-bs-toggle="dropdown" aria-expanded="true">
                   <div class="notCount position-absolute d-flex justify-content-center align-items-center">2</div>
-                  <div class="notificationPanel d-none overflow-auto capBefore">
+                  <div class="notificationPanel dropdown-menu overflow-auto capBefore">
                     <ul>
                       <li><a href="">Notification 1</a></li>
                       <li><a href="">Notification 2</a></li>
@@ -88,11 +88,11 @@
             <form autocomplete="off">
               <div class="input-group searchBox">
                 <div class="input-group-prepend d-flex">
-                  <button class="btnCaret btn dropdown-toggle" id="filterCaret" type="button" data-toggle="dropdown"
+                  <button class="btnCaret btn dropdown-toggle" id="filterCaret" type="button" data-bs-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">All<img
                       src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
                       class="img-fluid"></button>
-                  <div class="dropdown-menu filterMenu d-none capBefore">
+                  <div class="dropdown-menu filterMenu capBefore">
                     <div class="filter">
                       <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="selAll">
@@ -141,9 +141,10 @@
                 <div class="searchControlContent d-flex align-items-center">
                   <img src="./assets/icons/Icon material-search.svg" alt="search" class="img-fluid magnify">
                   <input type="search" class="form-control searchControl"
-                    placeholder="Search for Profile Chemical Location">
+                    placeholder="Search for Profile Chemical Location" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                   <img src="./assets/icons/Icon material-mic.svg" alt="speech" class="img-fluid microphone">
-                  <div class="dropdown-menu searchSuggestions capBefore d-none">
+                  <div class="dropdown-menu searchSuggestions capBefore ">
                     <ul>
                       <li class="d-flex align-items-center"><i class="far fa-user-circle"></i>
                         <a href="" class="w-100">My Profile</a>
@@ -167,10 +168,10 @@
             <div class="searchresultContent d-flex align-items-center justify-content-center">
               <div class="searchBtnContainer position-relative">
                 <button class="roundBtn  btn dropdown-toggle" id="searchResultCaret" type="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Results<img
+                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Results<img
                     src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
                     class="img-fluid"></button>
-                <div class="dropdown-menu recentSearch d-none capBefore" id="recentSearch">
+                <div class="dropdown-menu recentSearch capBefore" id="recentSearch">
                   <ul>
                     <li class="d-flex align-items-center"><i class="fas fa-search"></i><a href="">Search Result</a></li>
                     <li class="d-flex align-items-center"><i class="fas fa-chart-line"></i><a href="">Visualization</a></li>

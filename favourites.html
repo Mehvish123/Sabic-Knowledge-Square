@@ -1,0 +1,405 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SABIC | Knowledge Square</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+  <!--Reset Styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <!-- custom styles -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/responsive.css">
+  <style>
+    .delMessage {
+      background: #4D4D4D;
+      position: fixed;
+      top: 50px;
+      right: 20px;
+      border-radius: 16px;
+      display: none;
+    }
+
+    .delMessage .fa-times {
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="mainWrapper">
+    <div class="pageTopSection favouritePage">
+      <!--Header Section Starts-->
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="headerElements d-flex align-items-start flex-row-reverse flex-wrap px-sm-4">
+                <!--SABIC Logo-->
+                <div class="sabicLogo ms-4">
+                  <a href="#">
+                    <img src="./assets/icons/XMLID_47_.svg" alt="SABIC" class="img-fluid">
+                  </a>
+                </div>
+                <div class="headerElementDetails d-flex align-items-center">
+                  <div class="user d-flex align-items-center uhSameStyle">
+                    <p class="userEllipse d-flex align-items-center justify-content-center">NA</p>
+                    <p class="username">Noah Andersen</p>
+                    <button class="btnCaret dropdown-toggle" id="userCaret" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24"
+                        width="30px" fill="#0047BBBF" class="">
+                        <path d="M24 24H0V0h24v24z" fill="none" opacity=".87"></path>
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+                      </svg></button>
+
+                    <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                    <div class="dropdown-menu profileDropdown capBefore">
+                      <ul>
+                        <li class="d-flex align-items-center">
+                          <i class="far fa-user-circle"></i>
+                          <a href="">My Profile</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                          <i class="fas fa-cog"></i>
+                          <a href="">User Setting</a>
+                        </li>
+                      </ul>
+                      <h6 class="lastLogout">Login as:: 32000000</h6>
+                    </div>
+                  </div>
+                  <div class="helpDesk d-flex align-items-center uhSameStyle">
+                    <p>Help</p>
+                    <img src="./assets/icons/Icon material-help-outline.svg" alt="help" class="img-fluid">
+                    <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                  </div>
+                  <div class="notification d-flex align-items-center">
+                    <img src="/assets/icons/Bell.svg" alt="notification"
+                      class="dropdown-toggle bellIcon img-fluid position-relative" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="true">
+                    <div class="notCount position-absolute d-flex justify-content-center align-items-center">2</div>
+                    <div class="notificationPanel dropdown-menu overflow-auto capBefore">
+                      <ul>
+                        <li><a href="">Notification 1</a></li>
+                        <li><a href="">Notification 2</a></li>
+                        <li><a href="">Notification 3</a></li>
+                      </ul>
+                      <button type="button" class="clearBtn"><img src="/assets/icons/clear_all_black_24dp.svg"
+                          alt="clear"></button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-12 position-relative">
+              <div class="headerSearchContainer d-flex align-items-center position-absolute">
+                <h2 class="title">KNOWLEDGE SQUARE</h2>
+                <form autocomplete="off" class="d-flex">
+                  <div class="input-group searchBox mt-0">
+                    <div class="input-group-prepend d-flex">
+                      <button class="btnCaret btn dropdown-toggle" id="filterCaret" type="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<img
+                          src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                          class="img-fluid"></button>
+                      <div class="dropdown-menu filterMenu capBefore">
+                        <div class="filter">
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="selAll">
+                            <label class="form-check-label" for="selAll">Select All</label>
+                          </div>
+                        </div>
+
+                        <div role="separator" class="dropdown-divider"></div>
+                        <div class="filter d-flex">
+                          <p>Internal:</p>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="kmp">
+                            <label class="form-check-label" for="kmp">KMP</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="ecm">
+                            <label class="form-check-label" for="ecm">ECM</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="eln">
+                            <label class="form-check-label" for="eln">ELN</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="qc">
+                            <label class="form-check-label" for="qc">QC</label>
+                          </div>
+                        </div>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <div class="filter d-flex">
+                          <p>External:</p>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="oneSearch">
+                            <label class="form-check-label" for="oneSearch">OneSearch</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="skiFinder">
+                            <label class="form-check-label" for="skiFinder">SkiFinder</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="derwent">
+                            <label class="form-check-label" for="derwent">Derwent</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="searchControlContent d-flex align-items-center">
+                      <img src="./assets/icons/Icon material-search.svg" alt="search" class="img-fluid magnify">
+                      <input type="search" class="form-control searchControl"
+                        placeholder="Search for Profile Chemical Location">
+                      <img src="./assets/icons/Icon material-mic.svg" alt="speech" class="img-fluid microphone">
+                    </div>
+
+                  </div>
+                  <div class="searchBtnContainer position-relative d-flex align-items-center">
+                    <button class="roundBtn btn dropdown-toggle topHeaderBtn" id="searchResultCaret" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Results<img
+                        src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                        class="img-fluid ms-2"></button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </header>
+      <!--Header Section Ends Here-->
+      <div class="back-btn ms-3 mb-3 d-flex align-items-center">
+        <i class="fas fa-chevron-left"></i>
+        <div class="ms-2">
+          Favorites Results
+        </div>
+      </div>
+    </div>
+    <div class="delMessage text-white" id="delMsg">
+      <div class="text-end mt-0">
+        <i class="fas fa-times m-2" id="closeDelMsg"></i>
+      </div>
+      <div class="p-4 pt-0"><i class="fas fa-check-circle"></i> One Favourite result is deleted</div>
+    </div>
+    <!--Breadcrumb Section Starts-->
+    <section class="breadcrumbSection d-flex">
+      <div class="container">
+        <div class="navigationWrapper">
+          <div class="breadcrumbNavigation">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item d-flex align-items-center"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">Favorites Search
+                  Results</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Breadcrumb Section Ends-->
+    <!--Favorite Page Section Starts-->
+    <div class="favoriteContainer">
+      <div class="container">
+        <div class="favItem d-flex align-items-center">
+          <div class="pageName position-relative">
+            <p class="title">Search Page Name</p>
+          </div>
+          <div class="pageDetails">
+            <ul class="d-flex align-items-center justify-content-around">
+              <li><a href="">ecm_08920809_HDHDBJ_12_1909_SWEEP.XLX</a></li>
+              <li>Last Modified: 2020-01-17</li>
+              <li class="d-flex align-items-center position-relative"><img src="/assets/icons/delete.svg" alt="delete"
+                  class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="true"><span>Delete</span>
+                <div class="warningDp dropdown-menu capBefore">
+                  <div class="d-flex align-items-center">
+                    <img src="/assets/icons/warning.svg" alt="warning">
+                    <span class="title" style="color:#041E42">Would you like to delete this Favourite result?</span>
+                  </div>
+                  <div class="text-end">
+                    <div class="btn btnCancel rounded-pill" style="background:#F2F0F6F9">Cancel</div>
+                    <div class="btn btnDel btnSave rounded-pill ms-3" onclick="delFav()" onclick="delFav()">Delete</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="favItem d-flex align-items-center">
+          <div class="pageName position-relative">
+            <p class="title">Search Page Name</p>
+          </div>
+          <div class="pageDetails">
+            <ul class="d-flex align-items-center justify-content-around">
+              <li><a href="">ecm_08920809_HDHDBJ_12_1909_SWEEP.XLX</a></li>
+              <li>Last Modified: 2020-01-17</li>
+              <li class="d-flex align-items-center position-relative"><img src="/assets/icons/delete.svg" alt="delete"
+                  class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="true"><span>Delete</span>
+                <div class="warningDp dropdown-menu capBefore">
+                  <div class="d-flex align-items-center">
+                    <img src="/assets/icons/warning.svg" alt="warning">
+                    <span class="title" style="color:#041E42">Would you like to delete this Favourite result?</span>
+                  </div>
+                  <div class="text-end">
+                    <div class="btn btnCancel rounded-pill" style="background:#F2F0F6F9">Cancel</div>
+                    <div class="btn btnDel btnSave rounded-pill ms-3" onclick="delFav()">Delete</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="favItem d-flex align-items-center">
+          <div class="pageName position-relative">
+            <p class="title">Search Page Name</p>
+          </div>
+          <div class="pageDetails">
+            <ul class="d-flex align-items-center justify-content-around">
+              <li><a href="">ecm_08920809_HDHDBJ_12_1909_SWEEP.XLX</a></li>
+              <li>Last Modified: 2020-01-17</li>
+              <li class="d-flex align-items-center position-relative"><img src="/assets/icons/delete.svg" alt="delete"
+                  class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="true"><span>Delete</span>
+                <div class="warningDp dropdown-menu capBefore">
+                  <div class="d-flex align-items-center">
+                    <img src="/assets/icons/warning.svg" alt="warning">
+                    <span class="title" style="color:#041E42">Would you like to delete this Favourite result?</span>
+                  </div>
+                  <div class="text-end">
+                    <div class="btn btnCancel rounded-pill" style="background:#F2F0F6F9">Cancel</div>
+                    <div class="btn btnDel btnSave rounded-pill ms-3" onclick="delFav()">Delete</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="favItem d-flex align-items-center">
+          <div class="pageName position-relative">
+            <p class="title">Search Page Name</p>
+          </div>
+          <div class="pageDetails">
+            <ul class="d-flex align-items-center justify-content-around">
+              <li><a href="">ecm_08920809_HDHDBJ_12_1909_SWEEP.XLX</a></li>
+              <li>Last Modified: 2020-01-17</li>
+              <li class="d-flex align-items-center position-relative"><img src="/assets/icons/delete.svg" alt="delete"
+                  class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="true"><span>Delete</span>
+                <div class="warningDp dropdown-menu capBefore">
+                  <div class="d-flex align-items-center">
+                    <img src="/assets/icons/warning.svg" alt="warning">
+                    <span class="title" style="color:#041E42">Would you like to delete this Favourite result?</span>
+                  </div>
+                  <div class="text-end">
+                    <div class="btn btnCancel rounded-pill" style="background:#F2F0F6F9">Cancel</div>
+                    <div class="btn btnDel btnSave rounded-pill ms-3" onclick="delFav()">Delete</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="favItem d-flex align-items-center">
+          <div class="pageName position-relative">
+            <p class="title">Search Page Name</p>
+          </div>
+          <div class="pageDetails">
+            <ul class="d-flex align-items-center justify-content-around">
+              <li><a href="">ecm_08920809_HDHDBJ_12_1909_SWEEP.XLX</a></li>
+              <li>Last Modified: 2020-01-17</li>
+              <li class="d-flex align-items-center position-relative"><img src="/assets/icons/delete.svg" alt="delete"
+                  class="dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="true"><span>Delete</span>
+                <div class="warningDp dropdown-menu capBefore">
+                  <div class="d-flex align-items-center">
+                    <img src="/assets/icons/warning.svg" alt="warning">
+                    <span class="title" style="color:#041E42">Would you like to delete this Favourite result?</span>
+                  </div>
+                  <div class="text-end">
+                    <div class="btn btnCancel rounded-pill" style="background:#F2F0F6F9">Cancel</div>
+                    <div class="btn btnDel btnSave rounded-pill ms-3" onclick="delFav()">Delete</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="paginationContainer favPageContainer">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-end align-items-center">
+              <li class="page-item disabled">
+                <span class="page-link">Previous</span>
+              </li>
+              <li class="page-item active" aria-current="page">
+                <span class="page-link">1</span>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">2</a>
+              </li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <!--Favorite Page Section Ends-->
+    <!--Footer Starts-->
+    <footer class="d-flex align-items-center">
+      <div class="container">
+        <div class="copyright d-flex align-items-center justify-content-end" id="sabicCopyright">
+          <p>Copyright</p>
+          <script type="text/javascript">
+            var today = new Date(),
+              currentDate = today.getFullYear();
+            var para = document.createElement("p");
+            var date = document.createTextNode(currentDate);
+            para.appendChild(date);
+            var element = document.getElementById('sabicCopyright');
+            element.appendChild(para);
+          </script>
+          <p>SABIC</p>
+        </div>
+      </div>
+    </footer>
+    <!--Footer Ends-->
+  </main>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <!--Bootstrap-->
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--custom scripts-->
+  <script src="./js/scripts.js"></script>
+  <script>
+    delFav = () => {
+      document.getElementById('delMsg').style.display = 'block';
+      setTimeout(() => {
+        document.getElementById('delMsg').style.display = 'none';
+      }, 3000);
+    }
+
+    document.getElementById('closeDelMsg').addEventListener('click', () => {
+      document.getElementById('delMsg').style.display = 'none';
+    });
+  </script>
+</body>
+
+</html>

@@ -11,7 +11,14 @@
     max-width: 1420px;
   }
   .sort{
-    width:250px !important;
+    width:255px !important;
+  }
+  .mainContentSection .rightOuterWrapper h5 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .mainContentSection .itemDetails p {
+    font-size: 15px;
   }
 }
 
@@ -43,6 +50,19 @@
       padding: 29px 20px 10px;
     }
   } 
+  .mainContentSection .rightOuterWrapper h5 {
+    @include font-20;
+  }
+  .searchBox {
+    .searchControlContent {
+      .searchControl {
+        &::placeholder {
+          @include font-18;
+
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 991px) {

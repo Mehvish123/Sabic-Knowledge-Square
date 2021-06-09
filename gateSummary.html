@@ -1,0 +1,354 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SABIC | Knowledge Square</title>
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.3-web/css/all.min.css">
+  <!--Reset Styles-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <!-- custom styles -->
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./stylesheets/responsive.css">
+  <style>
+    .col-6 .rounded {
+      border-radius: 10px !important;
+    }
+
+    .col-6 table:first-child tr>td:first-child {
+      border-right: 1px solid #D4D1D2;
+      max-width: 100px;
+    }
+
+    .col-6 table td {
+      border-width: 1;
+    }
+  </style>
+  <script src="https://cdn.tiny.cloud/1/rs4na03fww072t7o92dkcaiec2x5riyji71aeybd8c58xobf/tinymce/5/tinymce.min.js"
+    referrerpolicy="origin"></script>
+</head>
+
+<body>
+  <main class="mainWrapper">
+    <div class="pageTopSection">
+      <!--Header Section Starts-->
+      <header>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="headerElements d-flex align-items-start flex-row-reverse flex-wrap px-sm-4">
+                <!--SABIC Logo-->
+                <div class="sabicLogo ms-4">
+                  <a href="#">
+                    <img src="./assets/icons/XMLID_47_.svg" alt="SABIC" class="img-fluid">
+                  </a>
+                </div>
+                <div class="headerElementDetails d-flex align-items-center">
+                  <div class="user d-flex align-items-center uhSameStyle">
+                    <p class="userEllipse d-flex align-items-center justify-content-center">NA</p>
+                    <p class="username">Noah Andersen</p>
+                    <button class="btnCaret dropdown-toggle" id="userCaret" type="button" data-bs-toggle="dropdown"
+                      aria-expanded="true"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24"
+                        width="30px" fill="#0047BBBF" class="">
+                        <path d="M24 24H0V0h24v24z" fill="none" opacity=".87"></path>
+                        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6-1.41-1.41z"></path>
+                      </svg></button>
+
+                    <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                    <div class="dropdown-menu profileDropdown capBefore">
+                      <ul>
+                        <li class="d-flex align-items-center">
+                          <i class="far fa-user-circle"></i>
+                          <a href="">My Profile</a>
+                        </li>
+                        <li class="d-flex align-items-center">
+                          <i class="fas fa-cog"></i>
+                          <a href="">User Setting</a>
+                        </li>
+                      </ul>
+                      <h6 class="lastLogout">Login as:: 32000000</h6>
+                    </div>
+                  </div>
+                  <div class="helpDesk d-flex align-items-center uhSameStyle">
+                    <p>Help</p>
+                    <img src="./assets/icons/Icon material-help-outline.svg" alt="help" class="img-fluid">
+                    <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
+                  </div>
+                  <div class="notification d-flex align-items-center">
+                    <img src="/assets/icons/Bell.svg" alt="notification"
+                      class="dropdown-toggle bellIcon img-fluid position-relative" type="button"
+                      data-bs-toggle="dropdown" aria-expanded="true">
+                    <div class="notCount position-absolute d-flex justify-content-center align-items-center">2</div>
+                    <div class="notificationPanel dropdown-menu overflow-auto capBefore">
+                      <ul>
+                        <li><a href="">Notification 1</a></li>
+                        <li><a href="">Notification 2</a></li>
+                        <li><a href="">Notification 3</a></li>
+                      </ul>
+                      <button type="button" class="clearBtn"><img src="/assets/icons/clear_all_black_24dp.svg"
+                          alt="clear"></button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="col-12 position-relative">
+              <div class="headerSearchContainer d-flex align-items-center position-absolute">
+                <h2 class="title">KNOWLEDGE SQUARE</h2>
+                <form autocomplete="off" class="d-flex">
+                  <div class="input-group searchBox mt-0">
+                    <div class="input-group-prepend d-flex">
+                      <button class="btnCaret btn dropdown-toggle" id="filterCaret" type="button"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<img
+                          src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                          class="img-fluid"></button>
+                      <div class="dropdown-menu filterMenu capBefore">
+                        <div class="filter">
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="selAll">
+                            <label class="form-check-label" for="selAll">Select All</label>
+                          </div>
+                        </div>
+
+                        <div role="separator" class="dropdown-divider"></div>
+                        <div class="filter d-flex">
+                          <p>Internal:</p>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="kmp">
+                            <label class="form-check-label" for="kmp">KMP</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="ecm">
+                            <label class="form-check-label" for="ecm">ECM</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="eln">
+                            <label class="form-check-label" for="eln">ELN</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="qc">
+                            <label class="form-check-label" for="qc">QC</label>
+                          </div>
+                        </div>
+                        <div role="separator" class="dropdown-divider"></div>
+                        <div class="filter d-flex">
+                          <p>External:</p>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="oneSearch">
+                            <label class="form-check-label" for="oneSearch">OneSearch</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="skiFinder">
+                            <label class="form-check-label" for="skiFinder">SkiFinder</label>
+                          </div>
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="derwent">
+                            <label class="form-check-label" for="derwent">Derwent</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="searchControlContent d-flex align-items-center">
+                      <img src="./assets/icons/Icon material-search.svg" alt="search" class="img-fluid magnify">
+                      <input type="search" class="form-control searchControl"
+                        placeholder="Search for Profile Chemical Location">
+                      <img src="./assets/icons/Icon material-mic.svg" alt="speech" class="img-fluid microphone">
+                    </div>
+
+                  </div>
+                  <div class="searchBtnContainer position-relative d-flex align-items-center">
+                    <button class="roundBtn btn dropdown-toggle topHeaderBtn" id="searchResultCaret" type="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Results<img
+                        src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
+                        class="img-fluid"></button>
+                    <button type="button" class="roundBtn topHeaderBtn">Cancel</button>
+                  </div>
+
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </header>
+      <div class="back-btn ms-3 mb-3 d-flex align-items-center">
+        <i class="fas fa-chevron-left"></i>
+        <div class="ms-2">
+          Gate Summary Presentation
+        </div>
+      </div>
+    </div>
+    <!--Breadcrumb Section Starts-->
+    <section class="breadcrumbSection d-flex">
+      <div class="container">
+        <div class="d-flex">
+          <div class="navigationWrapper">
+            <div class="container">
+              <div class="breadcrumbNavigation">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item d-flex align-items-center"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item d-flex align-items-center"><a href="allsearchresult.html">All Search
+                        Result</a></li>
+                    <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">Gate Summary</li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="ms-auto me-3">
+            <div class="dropdown">
+              <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"><img src="/assets/icons/star_border.svg" alt="fav">
+                My Favourite <img src="/assets/icons/expand.svg" alt="expand">
+              </button>
+              <ul class="dropdown-menu capBefore" aria-labelledby="favDD">
+                <li class="d-flex align-items-center"><img src="/assets/icons/history.svg" alt="history"><a
+                    class="dropdown-item" href="#">Result History</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!--Breadcrumb Section Ends-->
+
+    <div class="row m-3">
+      <div class="col-6">
+        <div class="border rounded">
+          <div class="border-bottom p-3 title">Document Properties</div>
+          <div class="p-3">
+            <table class="table table-striped border">
+              <tbody>
+                <tr>
+                  <td class="p-3">Document Title</td>
+                  <td class=" p-3">Test Title</td>
+                </tr>
+                <tr>
+                  <td class="p-3">Creation Date and Time</td>
+                  <td class=" p-3">2020-20-1 11:30</td>
+                </tr>
+                <tr>
+                  <td class="p-3">Last Modified Date and Time</td>
+                  <td class=" p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">URL</td>
+                  <td class="p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">Author</td>
+                  <td class="p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">Content Type</td>
+                  <td class="p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">Search Resource Name</td>
+                  <td class="p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">Created By</td>
+                  <td class="p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">File Size</td>
+                  <td class="p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">Total Pages</td>
+                  <td class="p-3"></td>
+                </tr>
+                <tr>
+                  <td class="p-3">Content Title</td>
+                  <td class="p-3"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="border rounded">
+          <div class="border-bottom p-3 title">Abstract</div>
+          <div class="p-3">
+            <div class="pb-3">
+              <span class="text-uppercase" style="color:#354A5F">document abstract: </span>
+              <span style="color:#8E8C8C">No Abstract Available</span>
+            </div>
+            <div class="border-top">
+              <p class="my-3" style="color:#354A5F">Related Documents</p>
+              <table class="table table-striped border">
+                <tbody>
+                  <tr>
+                    <td class="p-3"><a href="">ecm_93948713094873.xlx</a></td>
+                  </tr>
+                  <tr>
+                    <td class="p-3"><a href="">ecm_93948713094873.xlx</a></td>
+                  </tr>
+                  <tr>
+                    <td class="p-3"><a href="">ecm_93948713094873.xlx</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div>
+              <p class="my-3" style="color:#354A5F">Notes</p>
+              <textarea id="editable" class="w-100" style="height: 100px;"></textarea>
+            </div>
+            <div class="text-end">
+              <div class="btn btnCancel rounded-pill">Cancel</div>
+              <div class="btn btnSave rounded-pill ms-3">Save</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!--Footer Starts-->
+  <footer class="d-flex align-items-center">
+    <div class="container">
+      <div class="copyright d-flex align-items-center justify-content-end" id="sabicCopyright">
+        <p>Copyright</p>
+        <script type="text/javascript">
+          var today = new Date(),
+            currentDate = today.getFullYear();
+          var para = document.createElement("p");
+          var date = document.createTextNode(currentDate);
+          para.appendChild(date);
+          var element = document.getElementById('sabicCopyright');
+          element.appendChild(para);
+        </script>
+        <p>SABIC</p>
+      </div>
+    </div>
+  </footer>
+  <!--Footer Ends-->
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <!--Bootstrap-->
+  <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--custom scripts-->
+  <script src="./js/scripts.js"></script>
+  <script>
+    tinymce.init({
+      selector: 'textarea#editable',
+      menubar: '',
+      toolbar: 'undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | ' +
+        'bullist numlist outdent indent | link image | print preview media fullpage | ' +
+        'forecolor backcolor emoticons | help',
+      plugins: 'advlist link image lists'
+    });
+  </script>
+
+</body>
+
+</html>

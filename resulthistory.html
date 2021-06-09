@@ -28,6 +28,10 @@
     .btn-apply:hover {
       background-color: #F2F0F6F9;
     }
+
+    .text-primary {
+      color: #0047BBBF !important;
+    }
   </style>
 </head>
 
@@ -99,8 +103,8 @@
             <div class="col-12 position-relative">
               <div class="headerSearchContainer d-flex align-items-center position-absolute">
                 <h2 class="title">KNOWLEDGE SQUARE</h2>
-                <form autocomplete="off" class="d-flex">
-                  <div class="input-group searchBox mt-0">
+                <form autocomplete="off" class="d-flex text-left">
+                  <div class="input-group searchBox mt-0 ms-1">
                     <div class="input-group-prepend d-flex">
                       <button class="btnCaret btn dropdown-toggle" id="filterCaret" type="button"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">All<img
@@ -158,20 +162,10 @@
                         placeholder="Search for Profile Chemical Location">
                       <img src="./assets/icons/Icon material-mic.svg" alt="speech" class="img-fluid microphone">
                     </div>
-
                   </div>
-                  <div class="searchBtnContainer position-relative d-flex align-items-center">
-                    <button class="roundBtn btn dropdown-toggle topHeaderBtn" id="searchResultCaret" type="button"
-                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search Results<img
-                        src="./assets/icons/Icon material-keyboard-arrow-down.svg" alt="dropdown"
-                        class="img-fluid ms-2"></button>
-                    <button type="button" class="roundBtn topHeaderBtn">Cancel</button>
-                  </div>
-
                 </form>
               </div>
             </div>
-
           </div>
         </div>
       </header>
@@ -180,22 +174,70 @@
       <section class="tabSection">
         <div class="container">
           <div class="row">
-            <div class="col">
+            <div class="col d-flex">
+              <div class="dropdown">
+                <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fas fa-history me-2"></i>
+                  Search Result History <img src="/assets/icons/expand.svg" alt="expand">
+                </button>
+                <ul class="dropdown-menu capBefore" aria-labelledby="favDD" style="width: 100%;">
+                  <div class="text-end mt-0">
+                    <i class="fas fa-times text-primary mx-3 my-2" id="ddclose"></i>
+                  </div>
+                  <div class="border rounded-16 m-2 p-2">
+                    <div class="text-primary">
+                      Search Page Name ...
+                    </div>
+                    <div class="text-end text-secondary mt-2">Today at 12:30 PM</div>
+                  </div>
+                  <div class="border rounded-16 m-2 p-2">
+                    <div class="text-primary">
+                      Search Page Name ...
+                    </div>
+                    <div class="text-end text-secondary mt-2">Today at 12:30 PM</div>
+                  </div>
+                  <div class="border rounded-16 m-2 p-2">
+                    <div class="text-primary">
+                      Search Page Name ...
+                    </div>
+                    <div class="text-end text-secondary mt-2">Today at 12:30 PM</div>
+                  </div>
+                  <div class="border rounded-16 m-2 p-2">
+                    <div class="text-primary">
+                      Search Page Name ...
+                    </div>
+                    <div class="text-end text-secondary mt-2">Today at 12:30 PM</div>
+                  </div>
+                  <div class="d-flex align-items-center mx-2">
+                    <div class="text-secondary">Total 20</div>
+                    <div class="paginationContainer mt-0 ms-auto">
+                      <nav>
+                        <ul class="pagination justify-content-end align-items-center">
+                          <li class="page-item disabled py-0 px-2">
+                            <span class="page-link p-0">Previous</span>
+                          </li>
+                          <li class="page-item py-0 px-2">
+                            <a class="page-link p-0" href="#">Next</a>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  </div>
+                </ul>
+              </div>
               <ul class="nav nav-tabs d-flex flex-wrap" role="tablist" id="searchTab" data-tabs="tabs">
                 <li class="nav-item waves-effect waves-light d-flex align-items-center">
-
                   <a class="nav-link active text-center" id="allResult-tab" data-bs-toggle="tab"
-                    data-bs-target="#allResults" role="tab" aria-controls="allResults" aria-selected="true"><i
-                      class="fas fa-search"></i>All Search Result</a>
+                    data-bs-target="#allResults" role="tab" aria-controls="allResults" aria-selected="true"
+                    style="width: 325px;"><i class="fas fa-search"></i>All Search Result - (Today)</a>
                 </li>
                 <li class="nav-item waves-effect waves-light d-flex align-items-center">
-
                   <a class="nav-link text-center" id="visualization-tab" data-bs-toggle="tab"
                     data-bs-target="#visualization" role="tab" aria-controls="visualization" aria-selected="true"><i
                       class="fas fa-chart-line"></i>Visualization</a>
                 </li>
                 <li class="nav-item waves-effect waves-light d-flex align-items-center">
-
                   <a class="nav-link text-center" id="cluster-tab" data-bs-toggle="tab" data-bs-target="#cluster"
                     role="tab" aria-controls="cluster" aria-selected="true"><i class="fas fa-chart-line"></i>Cluster</a>
                 </li>
@@ -222,7 +264,7 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item d-flex align-items-center"><a href="index.html">Home</a></li>
                           <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">All Search
-                            Result</li>
+                            Result - (Today at 12:30 PM)</li>
                         </ol>
                       </nav>
                     </div>
@@ -452,11 +494,11 @@
                         </div>
                       </div>
                       <ul class="employeeResume">
-                        <li class="fadeBorder"><span>SBU: </span><span>Engineering & Project Management</span></li>
-                        <li class="fadeBorder"><span>Education: </span><span>University of Technology, Eihndoven, the
+                        <li class="fadeBorder"><span>SBU:</span><span>Engineering & Project Management</span></li>
+                        <li class="fadeBorder"><span>Education:</span><span>University of Technology, Eihndoven, the
                             Netherlands Process Engineering</span></li>
-                        <li class="fadeBorder"><span>Expertise: </span><span>Project Management</span></li>
-                        <li class="fadeBorder"><span>Projects: </span><span>Higher Alpha Olefins, Gelsenkirchin
+                        <li class="fadeBorder"><span>Expertise:</span><span>Project Management</span></li>
+                        <li class="fadeBorder"><span>Projects:</span><span>Higher Alpha Olefins, Gelsenkirchin
                             PPE-Recommissioning,Bergen op Zoom @Europe, Geleen</span></li>
                         <li class="d-flex justify-content-between align-items-center">
                           <p class="d-flex align-items-center">
@@ -592,7 +634,7 @@
                               Search
                               Result</a></li>
                           <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">Summary
-                            Matrics for Peeter</li>
+                            Matrics for Peeter - (Today at 12:30 PM)</li>
                         </ol>
                       </nav>
                     </div>
@@ -675,10 +717,9 @@
                         <ol class="breadcrumb">
                           <li class="breadcrumb-item d-flex align-items-center"><a href="index.html">Home</a></li>
                           <li class="breadcrumb-item d-flex align-items-center"><a href="allsearchresult.html">All
-                              Search
-                              Result</a></li>
+                              Search Result</a></li>
                           <li class="breadcrumb-item active d-flex align-items-center" aria-current="page">Cluster
-                            Result Summary for Peeter</li>
+                            Result Summary for Peeter - (Today at 12:30 PM)</li>
                         </ol>
                       </nav>
                     </div>
@@ -803,6 +844,11 @@
   <script src="./js/regionchart.js"></script>
   <script src="./js/yearlychart.js"></script>
   <script src="./js/yearlymonthlychart.js"></script>
+  <script>
+    document.getElementById('ddclose').addEventListener('click', () => {
+      btnClose.parentElement.parentElement.classList.remove('show');
+    });
+  </script>
 </body>
 
 </html>

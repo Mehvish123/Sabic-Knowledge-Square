@@ -34,8 +34,9 @@
   border: 1px solid $whiteGray;
   border-radius: 12px;
   padding: 0 12px 10px 12px;
-  position: absolute;
-  top: 50px;
+  transform: translate(0px, 48px) !important;
+  top: 0px;
+  inset: 0px auto auto 0px;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;

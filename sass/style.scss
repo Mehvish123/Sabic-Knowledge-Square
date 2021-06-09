@@ -55,10 +55,6 @@ a {
   }
 }
 
-.dropdown-menu {
-  display: block;
-}
-
 .dropdown-toggle {
   &::after {
     display: none;
@@ -70,12 +66,22 @@ button {
   outline: none;
   border: none;
 }
-
+// .btn{
+//   &:hover{
+//     background-color: $btnHover !important;
+//   }
+// }
 button.roundBtn {
   height: 50px;
   width: 200px;
   border: 1px solid $btnOutlineBlue;
   border-radius: 25px;
+}
+.form-select{
+  &:focus{
+    border-color: $whiteGray;
+    box-shadow: none;
+  }
 }
 
 .changeColor {
@@ -158,7 +164,7 @@ header {
     .profileDropdown,
     .notificationPanel {
       @include headerDpStyles;
-
+      
       ul {
         li {
           padding: 16px 0;
@@ -203,7 +209,7 @@ header {
       height: 153px;
       right: 0;
       padding-bottom: 0;
-
+      inset: 0px 0px 0px auto!important;
       ul {
         li {
           a {
@@ -272,8 +278,9 @@ header {
 
 //landing page main section
 .kSquareSection {
-  padding-top: 162px;
-  padding-bottom: 355px;
+  // padding-top: 162px;
+  // padding-bottom: 355px;
+  height: 100vh;
 }
 
 h1 {
@@ -328,7 +335,7 @@ h1 {
       padding-left: 45px;
 
       &::placeholder {
-        @include font-18;
+        font-size: 14px;
         letter-spacing: 0px;
         color: $placeholderGray;
       }
@@ -346,8 +353,7 @@ h1 {
 }
 
 .filterMenu {
-  display: block;
-  top: 95px;
+  inset: 20px auto auto 0px!important;
   padding: 0px 15px;
   border: 1px solid $whiteGray;
   border-radius: 12px;
@@ -423,10 +429,8 @@ h1 {
   .recentSearch {
     @include headerDpStyles;
     width: 212px;
-    top: 70px;
-    right: 0;
     padding-bottom: 0;
-    display: block;
+    inset: 20px auto auto 0px !important;
     z-index: 999;
 
     ul {
@@ -455,11 +459,9 @@ h1 {
 
 .searchSuggestions {
   @include headerDpStyles;
-  display: block;
-  top: 100px;
   width: 100%;
   padding: 13px 13px 13px 13px;
-
+  inset: 55px auto auto 0px !important;
   &:before {
     left: 0;
     right: 0;
@@ -585,12 +587,7 @@ footer {
         @include font-14;
         color: #333333;
       }
-      .form-select{
-        &:focus{
-          border-color: $whiteGray;
-          box-shadow: none;
-        }
-      }
+    
     }
 
     .rightWrap {
@@ -604,7 +601,8 @@ footer {
 
     h5 {
       font-family: 'SABIC Typeface Headline Light';
-      @include font-20;
+      font-size: 16px;
+      line-height: 18px;
       color: $blueGray;
 
       span.searchName {
@@ -738,7 +736,7 @@ footer {
   .itemDetails {
     p {
       color: $iconGray;
-      font-size: 15px;
+      font-size: 13px;
       line-height: 22px;
     }
 
@@ -793,7 +791,7 @@ footer {
   .searchBox {
     height: 60px;
     width: 400px;
-
+    margin: 0;
     .input-group-prepend {
       flex-basis: 22%;
 
@@ -812,6 +810,8 @@ footer {
     width: 148px;
     @include font-14;
     margin-left: 10px;
+    background: transparent;
+    color: $blueGray;
 
     &:last-child {
       width: 85px;
@@ -821,7 +821,16 @@ footer {
     }
   }
 }
-
+.pageTopSection.favouritePage{
+  #searchResultCaret{
+    height: 35px;
+    width: 148px;
+    @include font-14;
+    margin-left: 10px;
+    background: transparent;
+    color: $blueGray;
+  }
+}
 .tabSection {
   ul.nav-tabs {
     border-bottom: none;
@@ -938,13 +947,6 @@ footer {
       }
     }
 
-    .disabled {
-      .page-link {
-        color: $textGray;
-      }
-
-    }
-
     .page-item {
       .page-link {
         width: 36px;
@@ -962,6 +964,12 @@ footer {
         color: $white;
       }
     }
+    .disabled {
+      .page-link {
+        color: $textGray;
+      }
+
+    }
   }
 
 }
@@ -970,7 +978,6 @@ footer {
   h5.empHeading {
     background-color: $tabActiveBorder;
     opacity: 77%;
-    height: 50px;
     border-radius: 10px;
     @include font-18;
     font-family: 'SABIC Typeface Headline';
@@ -1003,7 +1010,7 @@ footer {
   }
 }
 .empEmail i,ul.employeeResume li i,
-.similarItemList i,.locHeading i{
+.similarItemList i{
   margin-right: 5px;
   color: $iconGray;
 }
@@ -1023,7 +1030,7 @@ footer {
 ul.employeeResume li,ul.similarItemList li,.seeAll{
   @include font-14;
 }
-.employeeResume{
+.similarItemList,.employeeResume{
   li{
     span{
       &:first-child{
@@ -1033,6 +1040,11 @@ ul.employeeResume li,ul.similarItemList li,.seeAll{
         color: $iconGray;
       }
     }
+  }
+}
+.employeeResume{
+  li{
+    
     &:last-child{
       padding: 30px 0px;
       span{
@@ -1128,4 +1140,197 @@ ul.similarItemList li:first-child{
 
 .breadcrumbSection .dropdown-menu.show{
   display: block;
+}
+
+//Favorite Page
+.pageTopSection .back-btn {
+  @include font-20;
+  color: $blue-1;
+  cursor: pointer;
+}
+
+.pageTopSection .back-btn i.fa-chevron-left {
+  color: #3B5998;
+  font-size: 32px;
+}
+.favItem{
+  height: 115px;
+  width: 100%;
+  padding: 0 30px;
+  border: 1px solid $whiteGray;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(136, 144, 145, 0.1);
+  margin-bottom: 30px;
+  .pageName{
+    @include font-20;
+    color: $blue-1;
+    flex-basis: 22%;
+    &:after{
+      content: '';
+      border-right: 1px solid;
+      position: absolute;
+      width: 1px;
+      height: 83px;
+      top: -27px;
+      right: 0;
+      bottom: 0;
+      color: #D4D1D2;
+    }
+  }
+  .pageDetails{
+    @include font-16;
+    color: $iconGray;
+    flex-basis: 78%;
+    li{
+      span{
+        margin-left: 7px;
+      }
+    }
+    a{
+      color: $linkBlue;
+    }
+    .text-end{
+      margin-top: 40px;
+    }
+  }
+}
+.favPageContainer{
+  margin-bottom: 40px;
+}
+.settingItem{
+  .pageName{
+    flex-basis: 30%;
+  }
+  .pageDetails{
+    flex-basis: 70%;
+    .form-select{
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid $iconGray;
+      width: 188px;
+      padding-bottom: 0;
+      @include font-16;
+      color:$blueGray;
+    }
+    .toggle{
+      font-size: 45px;
+      color: $btnOutlineBlue;
+      cursor: pointer;
+    }
+    .changeToggleColor{
+      color: $iconGray;
+    }
+  }
+  &:last-child{
+    margin-bottom: 115px;
+  }
+}
+.warningDp{
+  @include headerDpStyles;
+  width: 420px;
+  border: 1px solid #E35205;
+  border-radius: 12px;
+  padding: 18px 10px 18px 10px;
+  transform: translate(-238px, 48px) !important;
+  &::before{
+    border: solid #E35205;
+    border-width: 0 1px 1px 0;
+    left: 0;
+    right: 0;
+    top: -8px;
+  }
+}
+
+//gate summary
+.rounded {
+  @include font-16;
+  .border-bottom {
+    @include font-20;
+    color: $blue-1;
+  }
+}
+table{
+  border-collapse: separate;
+  tr{
+    td{
+      border-bottom: 1px solid #D4D1D2;
+      &:first-child{
+        color: $blueGray;
+      }
+      &:last-child{
+        color:$iconGray;
+      }
+    }
+    &:last-child{
+      td{
+        border-bottom: none;
+      }
+    }
+  }
+  
+  a{
+    color: $linkBlue;
+  }
+}
+.text-end{
+  margin-top: 16px;
+  .btn{
+    border: 1px solid $btnOutlineBlue;
+    border-radius: 20px;
+    height: 35px;
+    @include font-14;
+  }
+  .btnCancel{
+    background: transparent;
+    color: $btnOutlineBlue;
+    width: 100px;
+  }
+  .btnSave{
+    background: $btnOutlineBlue;
+    color: $white;
+    width: 85px;
+  }
+}
+.table.border{
+  border: 1px solid #D4D1D2 !important;
+  border-radius: 5px;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+  background: #EEEEEEB3;
+  border-top: 1px solid #D4D1D2;
+}
+//text editor
+.tox.tox-tinymce{
+  border-radius: 5px;
+}
+
+//location
+ul.officeAddress li:first-child{
+  border-top: none;
+}
+ul.officeAddress li:first-child p,
+ul.officeAddress li:nth-of-type(4) p,
+ul.officeAddress li:last-child p{
+  flex-basis: 50%;
+}
+.locHeading{
+  padding: 15px 10px;
+  align-items: baseline;
+}
+.locationMapContainer{
+  position: relative;
+  padding: 20px 20px 0;
+  .locImage{
+    margin-top: -30px;
+  }
+}
+
+.rotatePhone{
+  transform: rotate(90deg);
+}
+.mainContentSection {
+  h5.empHeading.locHeading {
+    @include font-16;
+    letter-spacing: 0.29px;
+  }
 }
