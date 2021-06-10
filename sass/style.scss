@@ -646,6 +646,7 @@ footer {
     height: auto;
     font-family: arial;
     color: $iconGray;
+    font-size: 12px;
   }
 
   // .datepicker td,
@@ -818,6 +819,10 @@ footer {
       color: $white;
       background: $btnOutlineBlue;
       margin-left: 8px;
+      &:hover{
+        background-color: #F2F0F6F9;
+        color: #354A5F;
+      }
     }
   }
 }
@@ -1242,6 +1247,18 @@ ul.similarItemList li:first-child{
 }
 
 //gate summary
+.col-6 .rounded {
+  border-radius: 10px !important;
+}
+
+.col-6 table:first-child tr>td:first-child {
+  border-right: 1px solid #D4D1D2;
+  max-width: 100px;
+}
+
+.col-6 table td {
+  border-width: 1;
+}
 .rounded {
   @include font-16;
   .border-bottom {
@@ -1333,4 +1350,27 @@ ul.officeAddress li:last-child p{
     @include font-16;
     letter-spacing: 0.29px;
   }
+}
+//result history
+.rounded-16 {
+  border-radius: 16px !important;
+}
+
+.btn-apply {
+  background-color: #0047BBBF;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #0047BBBF;
+  transition: all;
+}
+
+.btn-apply,.btnDel{
+  &:hover {
+    background-color: #F2F0F6F9;
+    color: #354A5F;
+  }
+}
+
+.text-primary {
+  color: #0047BBBF !important;
 }
