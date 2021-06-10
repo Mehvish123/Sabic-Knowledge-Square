@@ -1374,3 +1374,66 @@ ul.officeAddress li:last-child p{
 .text-primary {
   color: #0047BBBF !important;
 }
+
+//custom select
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url('/assets/icons/expand.svg'); background-size: auto;
+}
+
+/*style the items (options), including the selected item:*/
+.select-selected {
+  padding: 8px 16px;
+  border-bottom: 1px solid #8E8C8C;
+    width: 188px;
+    padding-bottom: 0;
+    font-size: 16px;
+    line-height: 24px;
+    color: #354A5F;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color:$white; 
+  top: 135%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 188px;
+  border: 1px solid #D9D9D9;
+  border-radius: 5px;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div{
+  border-bottom: 1px solid #D9D9D9;
+    padding: 5px 10px;
+    &:last-child{
+      border-bottom: none;
+    }
+}
+.select-items div:hover, .same-as-selected {
+  background-color: #F2F0F6F9;
+}
