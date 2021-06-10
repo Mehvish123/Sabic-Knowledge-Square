@@ -1,11 +1,16 @@
 $(document).ready(function () {
+  $('#userCaret').click(function(){
+    $('#userCaret.show svg').toggleClass('changeColor');
+  })
+});
+$(document).ready(function () {
   $('.clearHistory').click(function(){
-    $('.searchSuggestions').addClass('d-none');
+    $('.searchSuggestions').removeClass('show');
   })
 });
 $(document).ready(function () {
   $('.clearBtn').click(function(){
-    $('.notificationPanel').addClass('d-none');
+    $('.notificationPanel').removeClass('show');
   })
 });
 $(document).ready(function () {

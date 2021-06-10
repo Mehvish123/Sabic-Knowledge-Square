@@ -164,7 +164,6 @@ header {
     .profileDropdown,
     .notificationPanel {
       @include headerDpStyles;
-      
       ul {
         li {
           padding: 16px 0;
@@ -210,7 +209,10 @@ header {
       right: 0;
       padding-bottom: 0;
       inset: 0px 0px 0px auto!important;
+      padding: 0;
       ul {
+        padding: 0 12px 10px 12px;
+        height: 153px;
         li {
           a {
             @include font-14;
