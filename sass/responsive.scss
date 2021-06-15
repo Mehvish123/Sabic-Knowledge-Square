@@ -13,12 +13,24 @@
   .sort{
     width:255px !important;
   }
-  .mainContentSection .rightOuterWrapper h5 {
-    font-size: 18px;
-    line-height: 30px;
+  // .mainContentSection .rightOuterWrapper h5 {
+  //   font-size: 18px;
+  //   line-height: 30px;
+  // }
+  // .mainContentSection .itemDetails p {
+  //   font-size: 15px;
+  // }
+  .pageTopSection {
+    .searchBox {
+      width: 520px;  
+    }
   }
-  .mainContentSection .itemDetails p {
-    font-size: 15px;
+  .mainContentSection {
+    .empDetails {
+      .idDetails{
+        width: 80%;
+      }
+    }
   }
 }
 
@@ -29,40 +41,50 @@
 
   .pageTopSection {
     .searchBox {
-      height: 70px;
-      width: 600px;
-    }
-  }
-
-  .headerSearchContainer form {
-    max-width: 832px;
-  }
-
-  .pageTopSection .searchBox .searchControlContent {
-    flex-basis: 81%;
-  }
-
-  .pageTopSection .searchBox .input-group-prepend {
-    flex-basis: 18%;
-  }
-  .mainContentSection{
-    .samePaddingHeader.topHeading {
-      padding: 29px 20px 10px;
-    }
-  } 
-  .mainContentSection .rightOuterWrapper h5 {
-    @include font-20;
-  }
-  .searchBox {
-    .searchControlContent {
-      .searchControl {
-        &::placeholder {
-          @include font-18;
-
+      width: 700px;
+      .input-group-prepend{
+        button{
+          padding: 0 30px 0 30px;
         }
       }
     }
   }
+  .mainContentSection {
+    .empDetails {
+      .idDetails{
+        width: 69%;
+      }
+    }
+  }
+  // .headerSearchContainer form {
+  //   max-width: 832px;
+  // }
+
+  // .pageTopSection .searchBox .searchControlContent {
+  //   flex-basis: 81%;
+  // }
+
+  // .pageTopSection .searchBox .input-group-prepend {
+  //   flex-basis: 18%;
+  // }
+  // .mainContentSection{
+  //   .samePaddingHeader.topHeading {
+  //     padding: 29px 20px 10px;
+  //   }
+  // } 
+  // .mainContentSection .rightOuterWrapper h5 {
+  //   @include font-20;
+  // }
+  // .searchBox {
+  //   .searchControlContent {
+  //     .searchControl {
+  //       &::placeholder {
+  //         @include font-18;
+
+  //       }
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 991px) {

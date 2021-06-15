@@ -1,11 +1,6 @@
-@mixin font-16 {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-@mixin font-18 {
-  font-size: 18px;
-  line-height: 27px;
+@mixin font-12 {
+  font-size: 12px;
+  line-height: 20px;
 }
 @mixin font-13 {
   font-size: 13px;
@@ -17,23 +12,34 @@
   line-height: 20px;
 }
 
+@mixin font-16 {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin font-18 {
+  font-size: 18px;
+  line-height: 27px;
+}
+
 @mixin font-20 {
   font-size: 20px;
   line-height: 30px;
 }
+
 @mixin caretStyle {
   border: none;
   background: transparent;
   outline: none;
   padding: 0;
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 @mixin headerDpStyles {
   background: $white;
   border: 1px solid $whiteGray;
   border-radius: 12px;
-  padding: 0 12px 10px 12px;
+  padding: 0 10px 10px 10px;
   transform: translate(0px, 48px) !important;
   top: 0px;
   inset: 0px auto auto 0px;

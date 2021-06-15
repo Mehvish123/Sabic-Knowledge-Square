@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./fonts/fontawesome-free-5.15.3-web/css/all.min.css">
   <!--Reset Styles-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <!-- slick slider styles -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
   <!-- custom styles -->
   <link rel="stylesheet" href="./stylesheets/style.css">
   <link rel="stylesheet" href="./stylesheets/responsive.css">
@@ -41,7 +44,7 @@
             <div class="col-12">
               <div class="headerElements d-flex align-items-start flex-row-reverse flex-wrap px-sm-4">
                 <!--SABIC Logo-->
-                <div class="sabicLogo ms-4">
+                <div class="sabicLogo ms-2">
                   <a href="#">
                     <img src="./assets/icons/XMLID_47_.svg" alt="SABIC" class="img-fluid">
                   </a>
@@ -78,7 +81,7 @@
                     <img src="./assets/icons/Line 117.svg" alt="line" class="line img-fluid">
                   </div>
                   <div class="notification d-flex align-items-center">
-                    <img src="/assets/icons/Bell.svg" alt="notification"
+                    <img src="./assets/icons/Bell.svg" alt="notification"
                       class="dropdown-toggle bellIcon img-fluid position-relative" type="button"
                       data-bs-toggle="dropdown" aria-expanded="true">
                     <div class="notCount position-absolute d-flex justify-content-center align-items-center">2</div>
@@ -87,7 +90,7 @@
                         <li><a href="">Notification 1</a></li>
                         <li><a href="">Notification 2</a></li>
                         <li><a href="">Notification 3</a></li>
-                        <button type="button" class="clearBtn"><img src="/assets/icons/clear_all_black_24dp.svg"
+                        <button type="button" class="clearBtn"><img src="./assets/icons/clear_all_black_24dp.svg"
                           alt="clear"></button>
                       </ul>
                       
@@ -232,12 +235,12 @@
                 <div class="ms-auto me-3">
                   <div class="dropdown">
                     <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
-                      data-bs-toggle="dropdown" aria-expanded="false"><img src="/assets/icons/star_border.svg"
+                      data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/icons/star_border.svg"
                         alt="fav">
-                      My Favourite <img src="/assets/icons/expand.svg" alt="expand">
+                      My Favourite <img src="./assets/icons/expand.svg" alt="expand">
                     </button>
                     <ul class="dropdown-menu capBefore" aria-labelledby="favDD">
-                      <li class="d-flex align-items-center"><img src="/assets/icons/history.svg" alt="history"><a
+                      <li class="d-flex align-items-center"><img src="./assets/icons/history.svg" alt="history"><a
                           class="dropdown-item" href="#">Result History</a></li>
                     </ul>
                   </div>
@@ -334,16 +337,16 @@
                 </div>
                 <div class="rightOuterWrapper d-flex justify-content-around px-0">
                   <div class="centerWrap">
-                    <div class="d-flex">
+                    <div class="d-flex align-items-center">
                       <h5 class="searchHeading">Search Results for <span class="searchName">Peeters </span><span
                           class="searchCount">(2 results found)</span></h5>
                       <div class="sort d-flex align-items-center ms-auto" style="width: 272px;">
-                        <div class="d-flex align-items-center me-3" style="flex-basis:57%;">
+                        <div class="d-flex align-items-center justify-content-center me-1 ms-2" style="flex-basis:57%;">
                           <div>Sort By</div>
-                          <img src="/assets/icons/sort.svg" class="ms-2">
+                          <img src="./assets/icons/sort.svg" class="ms-2">
                         </div>
                         <select class="form-select"
-                          style="border-radius: 8px; background-image: url(/assets/icons/expand.svg); background-size: auto;">
+                          style="border-radius: 8px; background-image: url(./assets/icons/expand.svg); background-size: auto;">
                           <option value="1">Relevance</option>
                           <option value="2">Two</option>
                           <option value="3">Three</option>
@@ -362,11 +365,11 @@
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                 quis nostrud exercitation.
                               </p>
-                              <img src="/assets/icons/star_border.svg" alt="fav" class="img-fluid">
+                              <img src="./assets/icons/star_border.svg" alt="fav" class="img-fluid">
                             </div>
 
-                            <p class="attachmentLink d-flex align-items-center">
-                              <a href=""><img src="assets/icons/link.svg" class="attachmentIcon" alt="link"></a>
+                            <p class="attachmentLink d-flex align-items-center mt-4 mb-4">
+                              <a href=""><img src="./assets/icons/link.svg" class="attachmentIcon" alt="link"></a>
                               <a href="#">Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -390,10 +393,10 @@
                                 quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                 consequat.
                               </p>
-                              <img src="/assets/icons/star_border.svg" alt="fav" class="img-fluid">
+                              <img src="./assets/icons/star_border.svg" alt="fav" class="img-fluid">
                             </div>
-                            <p class="attachmentLink d-flex align-items-center">
-                              <a href=""><img src="assets/icons/link.svg" class="attachmentIcon" alt="link"></a>
+                            <p class="attachmentLink d-flex align-items-center mt-4 mb-4">
+                              <a href=""><img src="./assets/icons/link.svg" class="attachmentIcon" alt="link"></a>
                               <a href="#">Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit, sed do eiusmod
                                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -437,13 +440,13 @@
                         Peeters</h5>
                       <div class="empDetails">
                         <div class="empImage  position-relative d-flex justify-content-between">
-                          <img src="/assets/icons/peeters.svg" alt="Peeters" class="img-fluid">
+                          <img src="./assets/icons/peeters.svg" alt="Peeters" class="img-fluid">
                           <p class="text-right">Last Updated Date: 02/05/2021</p>
                         </div>
                         <div class="idDetails ms-auto">
-                          <div class="empLoginId d-flex align-items-center">
+                          <div class="empLoginId d-flex align-items-center mt-2 mb-1">
                             <p>Employee ID: 51900</p>
-                            <img src="/assets/icons/Line 117.svg" alt="line">
+                            <img src="./assets/icons/Line 117.svg" alt="line">
                             <p>Login ID: SABICCORP\312743</p>
                           </div>
                           <p class="empEmail d-flex align-items-center">
@@ -465,7 +468,7 @@
                             <span>Sittard Netherlands</span>
                           </p>
                           <p class="d-flex align-items-center">
-                            <img src="assets/icons/link.svg" class="attachmentIcon" alt="link">
+                            <img src="./assets/icons/link.svg" class="attachmentIcon" alt="link">
                             <a href="">SABICCORP\312743</a>
                           </p>
                         </li>
@@ -474,35 +477,48 @@
                     <div class="similarProfileContainer sameBorder sameMt">
                       <h5 class="sameBorderBottom samePaddingHeader searchHeading smProfile">Similar Profile (2)</h5>
                       <div class="similarItemsWrapper">
-                        <ul class="d-flex align-items-center similarItemList">
+                        <ul class="similarItemList similarItemSlider">
                           <li class="text-center">
-                            <div class="similarItemImage">
-                              <img src="/assets/icons/ajay-patnaik.svg" alt="ajay-patnaik" class="img-fluid">
+                            <div class="sliderInnerContent">
+                              <div class="similarItemImage">
+                                <img src="./assets/icons/ajay-patnaik.svg" alt="ajay-patnaik" class="img-fluid mx-auto">
+                              </div>
+                              <h5 class="uName mt-2 mb-2">Ajay Patnaik</h5>
+                              <a href="" class="sMail">ajay.patnaik@SABIC.com</a>
+                              <p class="d-flex align-items-center justify-content-center">
+                                <img src="./assets/icons/link.svg" class="attachmentIcon" alt="link">
+                                <a href="">SABICCORP\312743</a>
+                              </p>
                             </div>
-                            <h5 class="uName">Ajay Patnaik</h5>
-                            <a href="" class="sMail">ajay.patnaik@SABIC.com</a>
-                            <p class="d-flex align-items-center">
-                              <img src="assets/icons/link.svg" class="attachmentIcon" alt="link">
-                              <a href="">SABICCORP\312743</a>
-                            </p>
                           </li>
                           <li class="text-center">
-                            <div class="similarItemImage">
-                              <img src="/assets/icons/ajay-kumar.svg" alt="ajay-kumar" class="img-fluid">
+                            <div class="sliderInnerContent">
+                              <div class="similarItemImage">
+                                <img src="./assets/icons/ajay-kumar.svg" alt="ajay-kumar" class="img-fluid mx-auto">
+                              </div>
+                              <h5 class="uName mt-2 mb-2">Ajay Kumar</h5>
+                              <a href="" class="sMail">ajay.kumar@SABIC.com</a>
+                              <p class="d-flex align-items-center justify-content-center">
+                                <img src="./assets/icons/link.svg" class="attachmentIcon" alt="link">
+                                <a href="">SABICCORP\312743</a>
+                              </p>
                             </div>
-                            <h5 class="uName">Ajay Kumar</h5>
-                            <a href="" class="sMail">ajay.kumar@SABIC.com</a>
-                            <p class="d-flex align-items-center">
-                              <img src="assets/icons/link.svg" class="attachmentIcon" alt="link">
-                              <a href="">SABICCORP\312743</a>
-                            </p>
+                          </li>
+                          <li class="text-center">
+                            <div class="sliderInnerContent">
+                              <div class="similarItemImage">
+                                <img src="./assets/icons/ajay-kumar.svg" alt="ajay-kumar" class="img-fluid mx-auto">
+                              </div>
+                              <h5 class="uName mt-2 mb-2">Ajay Kumar</h5>
+                              <a href="" class="sMail">ajay.kumar@SABIC.com</a>
+                              <p class="d-flex align-items-center justify-content-center">
+                                <img src="./assets/icons/link.svg" class="attachmentIcon" alt="link">
+                                <a href="">SABICCORP\312743</a>
+                              </p>
+                            </div>
                           </li>
                         </ul>
                       </div>
-                      <a href="" class="seeAll d-flex align-items-center justify-content-end">
-                        <span>See All</span>
-                        <i class="fa fa-angle-right"></i>
-                      </a>
                     </div>
                   </div>
                   <!--For Location-->
@@ -514,7 +530,7 @@
                       </h5>
                       <div class="locationMapContainer">
                         <div class="locImage">
-                          <img src="/assets/icons/morocco-map.png" alt="map" class="img-fluid">
+                          <img src="./assets/icons/morocco-map.png" alt="map" class="img-fluid">
                         </div>
                       </div>
                       <ul class="employeeResume officeAddress">
@@ -545,33 +561,45 @@
                     <div class="similarProfileContainer sameBorder mt-5">
                       <h5 class="sameBorderBottom samePaddingHeader searchHeading smProfile">Similar Location (2)</h5>
                       <div class="similarItemsWrapper">
-                        <ul class="d-flex align-items-center similarItemList">
+                        <ul class="similarItemList similarItemSlider">
                           <li>
-                            <div class="similarItemImage">
-                              <img src="/assets/icons/location-map.png" alt="map" class="img-fluid map">
+                            <div class="sliderInnerContent">
+                              <div class="similarItemImage">
+                                <img src="./assets/icons/location-map.png" alt="map" class="img-fluid map">
+                              </div>
+                              <p class="d-flex align-items-center ms-3 mt-2">
+                                <a href="" style ="color:#6472F2">Location Name</a>
+                              </p>
+                              <p class="ms-3 mt-2"><span>Type: </span><span>Office</span></p>
+                              <p class="ms-3 mt-2"><span>Country: </span><span>Name 1</span></p>
                             </div>
-                            <p class="d-flex align-items-center ms-3 mt-3">
-                              <a href="" style ="color:#6472F2">Location Name</a>
-                            </p>
-                            <p class="ms-3 mt-3"><span>Type: </span><span>Office</span></p>
-                            <p class="ms-3 mt-2"><span>Country: </span><span>Name 1</span></p>
                           </li>
                           <li>
-                            <div class="similarItemImage">
-                              <img src="/assets/icons/location-map.png" alt="map" class="img-fluid map">
-                            </div>
-                            <p class="d-flex align-items-center ms-3 mt-3">
-                              <a href="" style ="color:#6472F2">Location Name</a>
-                            </p>
-                            <p class="ms-3 mt-3"><span>Type: </span><span>Office</span></p>
-                            <p class="ms-3 mt-2"><span>Country: </span><span>Name 2</span></p>
+                            <div class="sliderInnerContent">
+                              <div class="similarItemImage">
+                                <img src="./assets/icons/location-map.png" alt="map" class="img-fluid map">
+                              </div>
+                              <p class="d-flex align-items-center ms-3 mt-2">
+                                <a href="" style ="color:#6472F2">Location Name</a>
+                              </p>
+                              <p class="ms-3 mt-2"><span>Type: </span><span>Office</span></p>
+                              <p class="ms-3 mt-2"><span>Country: </span><span>Name 2</span></p>
+                            </div> 
+                          </li>
+                          <li>
+                            <div class="sliderInnerContent">
+                              <div class="similarItemImage">
+                                <img src="./assets/icons/location-map.png" alt="map" class="img-fluid map">
+                              </div>
+                              <p class="d-flex align-items-center ms-3 mt-2">
+                                <a href="" style ="color:#6472F2">Location Name</a>
+                              </p>
+                              <p class="ms-3 mt-2"><span>Type: </span><span>Office</span></p>
+                              <p class="ms-3 mt-2"><span>Country: </span><span>Name 2</span></p>
+                            </div> 
                           </li>
                         </ul>
                       </div>
-                      <a href="" class="seeAll d-flex align-items-center justify-content-end">
-                        <span>See All</span>
-                        <i class="fa fa-angle-right"></i>
-                      </a>
                     </div>
                   </div>
                   <!--Location Ends-->
@@ -602,12 +630,12 @@
                 <div class="ms-auto me-3">
                   <div class="dropdown">
                     <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
-                      data-bs-toggle="dropdown" aria-expanded="false"><img src="/assets/icons/star_border.svg"
+                      data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/icons/star_border.svg"
                         alt="fav">
-                      My Favourite <img src="/assets/icons/expand.svg" alt="expand">
+                      My Favourite <img src="./assets/icons/expand.svg" alt="expand">
                     </button>
                     <ul class="dropdown-menu capBefore" aria-labelledby="favDD">
-                      <li class="d-flex align-items-center"><img src="/assets/icons/history.svg" alt="history"><a
+                      <li class="d-flex align-items-center"><img src="./assets/icons/history.svg" alt="history"><a
                           class="dropdown-item" href="#">Result History</a></li>
                     </ul>
                   </div>
@@ -688,12 +716,12 @@
                 <div class="ms-auto me-3">
                   <div class="dropdown">
                     <button class="d-flex align-items-center favDD btn btn--outline-light dropdown-toggle" type="button"
-                      data-bs-toggle="dropdown" aria-expanded="false"><img src="/assets/icons/star_border.svg"
+                      data-bs-toggle="dropdown" aria-expanded="false"><img src="./assets/icons/star_border.svg"
                         alt="fav">
-                      My Favourite <img src="/assets/icons/expand.svg" alt="expand">
+                      My Favourite <img src="./assets/icons/expand.svg" alt="expand">
                     </button>
                     <ul class="dropdown-menu capBefore" aria-labelledby="favDD">
-                      <li class="d-flex align-items-center"><img src="/assets/icons/history.svg" alt="history"><a
+                      <li class="d-flex align-items-center"><img src="./assets/icons/history.svg" alt="history"><a
                           class="dropdown-item" href="#">Result History</a></li>
                     </ul>
                   </div>
@@ -798,6 +826,8 @@
     </script>
   <!--Bootstrap-->
   <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Slick Slider -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <!--custom scripts-->
   <script src="./js/scripts.js"></script>
   <script src="./js/authorchart.js"></script>

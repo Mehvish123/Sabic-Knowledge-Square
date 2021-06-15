@@ -118,3 +118,15 @@ then close all select boxes:*/
 document.addEventListener("click", closeAllSelect);
 $('.select-items').addClass('capBefore');
 });
+
+$(document).ready(function(){
+  $('.similarItemSlider').slick({
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      autoplaySpeed: 7000,
+  });
+
+});

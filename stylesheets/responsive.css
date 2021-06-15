@@ -15,136 +15,111 @@
     width: 255px !important;
   }
 
-  /* line 16, ../sass/responsive.scss */
-  .mainContentSection .rightOuterWrapper h5 {
-    font-size: 18px;
-    line-height: 30px;
+  /* line 24, ../sass/responsive.scss */
+  .pageTopSection .searchBox {
+    width: 520px;
   }
 
-  /* line 20, ../sass/responsive.scss */
-  .mainContentSection .itemDetails p {
-    font-size: 15px;
+  /* line 30, ../sass/responsive.scss */
+  .mainContentSection .empDetails .idDetails {
+    width: 80%;
   }
 }
 @media (min-width: 1700px) {
-  /* line 26, ../sass/responsive.scss */
+  /* line 38, ../sass/responsive.scss */
   .container {
     max-width: 1620px;
   }
 
-  /* line 31, ../sass/responsive.scss */
+  /* line 43, ../sass/responsive.scss */
   .pageTopSection .searchBox {
-    height: 70px;
-    width: 600px;
+    width: 700px;
+  }
+  /* line 46, ../sass/responsive.scss */
+  .pageTopSection .searchBox .input-group-prepend button {
+    padding: 0 30px 0 30px;
   }
 
-  /* line 37, ../sass/responsive.scss */
-  .headerSearchContainer form {
-    max-width: 832px;
-  }
-
-  /* line 41, ../sass/responsive.scss */
-  .pageTopSection .searchBox .searchControlContent {
-    flex-basis: 81%;
-  }
-
-  /* line 45, ../sass/responsive.scss */
-  .pageTopSection .searchBox .input-group-prepend {
-    flex-basis: 18%;
-  }
-
-  /* line 49, ../sass/responsive.scss */
-  .mainContentSection .samePaddingHeader.topHeading {
-    padding: 29px 20px 10px;
-  }
-
-  /* line 53, ../sass/responsive.scss */
-  .mainContentSection .rightOuterWrapper h5 {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
-  /* line 59, ../sass/responsive.scss */
-  .searchBox .searchControlContent .searchControl::placeholder {
-    font-size: 18px;
-    line-height: 27px;
+  /* line 54, ../sass/responsive.scss */
+  .mainContentSection .empDetails .idDetails {
+    width: 69%;
   }
 }
 @media (max-width: 991px) {
-  /* line 70, ../sass/responsive.scss */
+  /* line 92, ../sass/responsive.scss */
   .searchBox .input-group-prepend {
     flex-basis: 15%;
   }
-  /* line 74, ../sass/responsive.scss */
+  /* line 96, ../sass/responsive.scss */
   .searchBox .searchControlContent {
     flex-basis: 85%;
   }
 }
 @media (max-width: 767px) {
-  /* line 82, ../sass/responsive.scss */
+  /* line 104, ../sass/responsive.scss */
   .searchBox .input-group-prepend {
     flex-basis: 18%;
   }
-  /* line 86, ../sass/responsive.scss */
+  /* line 108, ../sass/responsive.scss */
   .searchBox .searchControlContent {
     flex-basis: 82%;
   }
-  /* line 90, ../sass/responsive.scss */
+  /* line 112, ../sass/responsive.scss */
   .searchBox .searchControlContent .searchControl::placeholder {
     font-size: 14px;
     line-height: 20px;
   }
 }
 @media (max-width: 479px) {
-  /* line 102, ../sass/responsive.scss */
+  /* line 124, ../sass/responsive.scss */
   header .headerElementDetails .uhSameStyle {
     font-size: 13px;
   }
 
-  /* line 108, ../sass/responsive.scss */
+  /* line 130, ../sass/responsive.scss */
   button.roundBtn {
     height: 45px;
     width: 150px;
   }
 
-  /* line 115, ../sass/responsive.scss */
+  /* line 137, ../sass/responsive.scss */
   h1 {
     line-height: 35px;
     font-size: 24px;
   }
 
-  /* line 120, ../sass/responsive.scss */
+  /* line 142, ../sass/responsive.scss */
   .searchBox {
     height: 60px;
   }
-  /* line 123, ../sass/responsive.scss */
+  /* line 145, ../sass/responsive.scss */
   .searchBox .input-group-prepend {
     flex-basis: 25%;
   }
-  /* line 126, ../sass/responsive.scss */
+  /* line 148, ../sass/responsive.scss */
   .searchBox .input-group-prepend button {
     padding: 0 20px 0 20px;
   }
-  /* line 131, ../sass/responsive.scss */
+  /* line 153, ../sass/responsive.scss */
   .searchBox .searchControlContent {
     flex-basis: 75%;
   }
 
-  /* line 137, ../sass/responsive.scss */
+  /* line 159, ../sass/responsive.scss */
   .filterMenu:before {
     left: -220px;
   }
-  /* line 141, ../sass/responsive.scss */
+  /* line 163, ../sass/responsive.scss */
   .filterMenu .filter {
     flex-wrap: wrap;
   }
 
-  /* line 147, ../sass/responsive.scss */
+  /* line 169, ../sass/responsive.scss */
   .searchresultContent button {
     font-size: 14px;
     line-height: 20px;
   }
-  /* line 150, ../sass/responsive.scss */
+  /* line 172, ../sass/responsive.scss */
   .searchresultContent button img {
     padding-left: 5px;
   }
