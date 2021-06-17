@@ -1579,3 +1579,15 @@ ul.officeAddress li:last-child p {
   color: #0047bb;
   opacity: 85%;
 }
+
+/* line 1568, ../sass/style.scss */
+.srDropdown:before {
+  content: '';
+  border-right: 2px solid #939598;
+  position: absolute;
+  width: 1px;
+  height: 35px;
+  top: 7px;
+  right: 7px;
+  bottom: 0;
+}
